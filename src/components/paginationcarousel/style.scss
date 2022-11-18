@@ -1,0 +1,48 @@
+.swiper {
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  border-radius: 10px;
+  width: 326px;
+  height: 50%;
+  object-fit: cover;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.img:hover {
+  transform: scale(1.05);
+}
+.swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border: #dd0e1d solid 2px;
+  background-color: #dd0e1d;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: rgb(255, 255, 255);
+}
