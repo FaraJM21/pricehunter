@@ -27,16 +27,15 @@
     padding: 20px 0;
     height: 650px;
 
-    .inner {
+    .cards-group {
       display: flex;
       flex-direction: column;
       gap: 10px;
-    
+
       .cards {
         width: 288px;
         height: 206px;
         border-radius: 30px;
-       
       }
     }
     .card {
@@ -45,7 +44,8 @@
       border-radius: 30px;
     }
 
-    .one, .cards {
+    .one,
+    .cards {
       background: url(https://media.idownloadblog.com/wp-content/uploads/2018/04/iPhone8-RED-wallpaper.jpeg)
         no-repeat center center;
       background-size: cover;

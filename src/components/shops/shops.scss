@@ -1,0 +1,52 @@
+.shops {
+  width: 100%;
+}
+
+.shop-title {
+  position: relative;
+  width: 200px;
+  left: 2%;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.shop-cards {
+  width: 90%;
+  margin: 5% auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .shop-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 210px;
+    height: 192px;
+    border: 1px solid #dd0e1d;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.7s all;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  .shop-card:hover {
+    transform: scale(1.05);
+  }
+}

@@ -5,6 +5,8 @@ import {
   PaginationCarousel,
   Product,
   ProductSec,
+  Shops,
+  MainBottom,
 } from "../../components/index";
 
 import "./home.scss";
@@ -15,7 +17,7 @@ function Home() {
       <div className="ads">
         <div className="box">
           <div className="card one"></div>
-          <div className="inner">
+          <div className="cards-group">
             <div className="cards"></div>
             <div className="cards"></div>
           </div>
@@ -44,6 +46,9 @@ function Home() {
         <h3 className="product-title">Лучшее падение цен</h3>
         <PaginationCarousel />
       </div>
+      <Shops />
+
+      <MainBottom />
     </main>
   );
 }

@@ -27,7 +27,7 @@ function Carousels() {
         {data.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="card" >
+              <div className="card">
                 <img src={item.img} alt="404" />
                 <div className="info">
                   <p className="card-title">{item.title}</p>

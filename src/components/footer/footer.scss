@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  background: #8f8f8fad;
+  height: 500px;
+
+  .footerInner {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    height: 40%;
+    align-items: center;
+  }
+
+  .documents {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+    h3 {
+      color: #4e4e4e;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.2rem;
+     
+    }
+    ul {
+      list-style-type: none;
+      color: #ffffff;
+
+      li {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+       
+      }
+    }
+  }
+}
