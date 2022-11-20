@@ -13,8 +13,8 @@ function Paginations() {
           <span
             key={index}
             style={{
-              background: num === number ? "red" : "",
-              color: num === number ? "white" : "",
+              background: num === number && "red",
+              color: num === number && "white",
             }}
             onClick={() => setNum(number)}
           >

@@ -20,12 +20,14 @@ function Header() {
     if ((value.match(eng) || value.match(rus)) && e.key === "Enter") {
       setValue(e.target.value);
       navigate(`/search/${value}`, { state: value });
+      setValue("")
     }
   };
 
   const handleClick = () => {
     if (value.match(eng) || value.match(rus)) {
       navigate(`/search/${value}`, { state: value });
+      setValue("")
     }
   };
   return (
