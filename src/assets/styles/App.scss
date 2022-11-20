@@ -48,3 +48,11 @@ html {
 body {
   height: 100vh;
 }
+
+
+@media (max-width:960px){
+  html {
+    font-size: 13px;
+  }
+ 
+}

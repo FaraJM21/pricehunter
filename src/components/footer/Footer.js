@@ -1,18 +1,18 @@
 import React from "react";
-import './footer.scss'
+import cls from "./footer.module.scss";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footerInner">
-        <div className="documents">
+    <footer className={cls.footer}>
+      <div className={cls.inner}>
+        <div className={cls.documents}>
           <h3>Документы</h3>
           <ul>
             <li>Политика конфиденциальности</li>
             <li>Публичная оферта</li>
           </ul>
         </div>
-        <div className="documents">
+        <div className={cls.documents}>
           <h3>Сервис</h3>
           <ul>
             <li>О нас</li>

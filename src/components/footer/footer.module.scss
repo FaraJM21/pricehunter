@@ -2,9 +2,10 @@
   width: 100%;
   background: #8f8f8fad;
   height: 500px;
+  margin: 5% 0;
 
-  .footerInner {
-    width: 40%;
+  .inner {
+    width: 50%;
     display: flex;
     justify-content: space-evenly;
     gap: 50px;
@@ -21,7 +22,6 @@
       font-style: normal;
       font-weight: 500;
       font-size: 1.2rem;
-     
     }
     ul {
       list-style-type: none;
@@ -31,7 +31,6 @@
         font-style: normal;
         font-weight: 500;
         font-size: 1.2rem;
-       
       }
     }
   }

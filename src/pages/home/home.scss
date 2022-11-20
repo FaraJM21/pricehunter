@@ -18,74 +18,83 @@
   margin: auto;
   display: flex;
   gap: 10px;
+}
+.box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  height: 650px;
+}
 
-  .box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
-    height: 650px;
+.cards-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-    .cards-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      .cards {
-        width: 288px;
-        height: 206px;
-        border-radius: 30px;
-      }
-    }
-    .card {
-      width: 288px;
-      height: 432px;
-      border-radius: 30px;
-    }
-
-    .one,
-    .cards {
-      background: url(https://media.idownloadblog.com/wp-content/uploads/2018/04/iPhone8-RED-wallpaper.jpeg)
-        no-repeat center center;
-      background-size: cover;
-    }
-
-    .two {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      background: #d9d9d9;
-      text-align: center;
-
-      .iconBox {
-        width: 100px;
-        height: 100px;
-        background-color: #ffffff;
-        font-size: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 1rem;
-      }
-
-      .text {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
-
-      button {
-        width: 15rem;
-        height: 50px;
-        background: #ffffff;
-        border: none;
-        border-radius: 15px;
-      }
-    }
+  .cards {
+    width: 288px;
+    height: 206px;
+    border-radius: 30px;
   }
+}
+
+.card {
+  width: 288px;
+  height: 432px;
+  border-radius: 30px;
+}
+
+.one,
+.cards {
+  background: url(https://media.idownloadblog.com/wp-content/uploads/2018/04/iPhone8-RED-wallpaper.jpeg)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #d9d9d9;
+  text-align: center;
+
+  .text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  button {
+    width: 15rem;
+    height: 50px;
+    background: #ffffff;
+    border: none;
+    border-radius: 15px;
+  }
+}
+
+.card-box {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconBox {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
 }
 
 .products {
@@ -96,58 +105,60 @@
   gap: 40px;
   justify-content: center;
   text-align: start;
-  padding: 0 20px;
+  padding: 20px 20px;
+  margin: 5% 0;
+}
 
-  .btns {
-    width: 100%;
-    // height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    #btn1,
-    #btn2,
-    select {
-      width: 151px;
-      text-align: center;
-      height: 51px;
-      border: 2px solid #dd0e1d;
-      border-radius: 25.5px;
-    }
+.btns {
+  width: 100%;
+  // height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
 
-    .btn {
-      display: flex;
-      gap: 10px;
-      #btn1 {
-        width: 138px;
-      }
+#btn1,
+#btn2,
+select {
+  width: 151px;
+  text-align: center;
+  height: 51px;
+  border: 2px solid #dd0e1d;
+  border-radius: 25.5px;
+}
 
-      #btn2 {
-        width: 173px;
-      }
+.btn {
+  display: flex;
+  gap: 10px;
+}
 
-      #btn1,
-      #btn2 {
-        background: linear-gradient(#dd0e1d, #dd0e1d);
-        transition: 500ms;
-        background-repeat: no-repeat;
-        background-position-x: left;
-        background-size: 0 100%;
-        cursor: pointer;
-      }
+#btn1 {
+  width: 138px;
+}
 
-      #btn1:hover,
-      #btn2:hover {
-        background-size: 100% 100%;
-        background-position-x: left;
-      }
-    }
-  }
+#btn2 {
+  width: 173px;
+}
+
+#btn1,
+#btn2 {
+  background: linear-gradient(#dd0e1d, #dd0e1d);
+  transition: 500ms;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-size: 0 100%;
+  cursor: pointer;
+}
+
+#btn1:hover,
+#btn2:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
 }
 
 .container {
-  button,
-  .active {
+  button {
     width: 207px;
     height: 51px;
     border-radius: 25.5px;
@@ -163,17 +174,101 @@
   button:hover {
     background-size: 100% 100%;
   }
-  .active {
-    color: white;
-    background-color: #dd0e1d;
-  }
 }
 
 .carousel {
-  height: 450px;
+  height: 550px;
+  margin: 5% 0;
 }
 .product-title {
   position: relative;
   width: 200px;
   left: 2%;
+}
+
+@media (max-width: 960px) {
+  .ads {
+    justify-content: center;
+  }
+  .box {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+  }
+  .card {
+    width: 100%;
+    height: 200px;
+  }
+  .cards-group {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    .cards {
+      width: 50%;
+    }
+  }
+  .card-box {
+    width: 80%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .iconBox {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 910px) {
+  .products {
+    height: auto;
+    .btns {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .btn {
+      width: 100%;
+      row-gap: 30px;
+    }
+  }
+
+  .btn,
+  #btn1,
+  #btn2,
+  select,
+  .container {
+    width: 100%;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .btn1,
+    .btn2 {
+      width: 49%;
+    }
+    .btn3 {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 618px) {
+  .ads, .adTitle{
+    display: none;
+  }
+  .btn {
+    flex-wrap: wrap;
+  }
+  .container {
+    .btn1,
+    .btn2 {
+      width: 100%;
+    }
+  }
 }

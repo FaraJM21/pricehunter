@@ -2,34 +2,39 @@ import { SearchOutlined } from "@ant-design/icons";
 import React from "react";
 import logo1 from "../../assets/pricehunter logo 1.svg";
 import logo2 from "../../assets/pricehunter logo 2.svg";
+import logo3 from "../../assets/logo3.svg";
 import Selects from "../selects/Selects";
 import SelectSec from "../selects/SelectSec";
-import {BsFillPersonFill } from "react-icons/bs";
-import "./header.scss";
+import { BsFillPersonFill } from "react-icons/bs";
+import cls from "./header.module.scss";
+import TemporaryDrawer from "../temporarydrawer/TemporaryDrawer";
 function Header() {
   return (
-    <header className="header">
-      <nav className="nav">
-        <div className="inner">
-          <div className="logo">
-            <img src={logo2} alt="404" />
-            <img src={logo1} alt="404" />
+    <header className={cls.header}>
+      <nav className={cls.nav}>
+        <div className={cls.inner}>
+          <TemporaryDrawer />
+          <div className={cls.logo}>
+            <img src={logo2} alt="404" className={cls.logo_1} />
+            <img src={logo1} alt="404" className={cls.logo_1} />
+            <img src={logo3} alt="404" className={cls.logo_res} />
           </div>
-          <div className="search">
-            <input type="text" />
-            <span>
+          <div className={cls.search}>
+            <input type={cls.text} />
+            <div className={cls.searchIcon}>
               <SearchOutlined />
-            </span>
+            </div>
           </div>
         </div>
 
-        <div className="wrapper">
-          
+        <div className={cls.wrapper}>
           <Selects />
           <SelectSec />
           <h4>Предложения</h4>
-    
-        <span id="icon"><BsFillPersonFill /></span>    
+
+          <div id={cls.icon}>
+            <BsFillPersonFill />
+          </div>
         </div>
       </nav>
     </header>

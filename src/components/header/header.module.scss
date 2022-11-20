@@ -1,0 +1,160 @@
+.header {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+}
+.inner {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  height: 100%;
+  .logo_res {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  div {
+    width: 26px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+
+.search {
+  position: relative;
+  input {
+    width: 500px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    outline: none;
+    padding: 0 20px;
+    font-size: 0.8rem;
+    font-style: normal;
+    transition: 500ms;
+  }
+
+  .searchIcon {
+
+
+    position: absolute;
+    top: 0;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 30px 30px 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-style: none solid solid none;
+  }
+}
+
+.wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+
+  #icon {
+    width: 24px;
+    height: 24px;
+    font-size: 1.3rem;
+    border: 2px solid #000000;
+    border-radius: 20%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .search {
+    input {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .wrapper {
+    width: 45%;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 960px) {
+  .header {
+    padding: 0;
+  }
+  .inner {
+    width: 100%;
+    justify-content: center;
+
+    .search {
+      width: 50%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .logo {
+    .logo_1 {
+      display: none;
+    }
+    .logo_res {
+      display: block;
+    }
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav {
+    padding: 0 20px;
+  }
+  .inner {
+    width: 100%;
+    justify-content: center;
+
+    .search {
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

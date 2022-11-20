@@ -7,3 +7,4 @@ export { default as Selects } from "./selects/Selects";
 export { default as SelectSec } from "./selects/SelectSec";
 export { default as Shops } from "./shops/Shops";
 export { default as MainBottom } from "./mainbottom/MainBottom";
+export { default as TemporaryDrawer } from "./temporarydrawer/TemporaryDrawer";

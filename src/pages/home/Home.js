@@ -22,30 +22,31 @@ function Home() {
             <div className="cards"></div>
           </div>
           <div className="card two">
-            <div className="iconBox">
-              <BsFillPersonFill />
+            <div className="card-box">
+              <div className="iconBox">
+                <BsFillPersonFill />
+              </div>
+              <div className="text">
+                Чтобы получать уведомления о снижении цен на все категории
+                товаров, вам необходимо зарегистрироваться
+              </div>
             </div>
 
-            <div className="text">
-              Чтобы получать уведомления о снижении цен на все категории
-              товаров, вам необходимо зарегистрироваться
-            </div>
             <button>Зарегистрироваться</button>
           </div>
         </div>
       </div>
       <Product />
-      <div className="carousel">
-        <Carousels />
-      </div>
+
+      <Carousels />
+
       <ProductSec />
-      <div className="carousel">
-        <Carousels />
-      </div>
-      <div className="carousel">
-        <h3 className="product-title">Лучшее падение цен</h3>
+
+      <Carousels />
+
+     
         <PaginationCarousel />
-      </div>
+
       <Shops />
 
       <MainBottom />
