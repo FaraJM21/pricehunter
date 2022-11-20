@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   padding: 0 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .nav {
@@ -29,6 +30,7 @@
 
 .hamburger {
   display: none;
+  cursor: pointer;
   div {
     width: 26px;
     height: 2px;
@@ -52,8 +54,6 @@
   }
 
   .searchIcon {
-
-
     position: absolute;
     top: 0;
     right: 0%;
@@ -157,4 +157,13 @@
       }
     }
   }
+}
+
+.closer {
+  position: absolute;
+  font-size: 20px;
+  right: 2%;
+  top: 2%;
+  cursor: pointer;
+  z-index: 100;
 }

@@ -7,8 +7,18 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { Divider } from "antd";
 import cls from "../header/header.module.scss";
+import { CloseOutlined } from "@ant-design/icons";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState(false);
+  const [width, setWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -22,84 +32,101 @@ export default function TemporaryDrawer() {
   };
 
   const list = (anchor) => (
-    <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 350 }}
-      role="presentation"
+    <div style={{backgroundColor:"#B6B6B6"}}>
+      <Box
+        sx={{
+          width:
+            anchor === "top" || anchor === "bottom"
+              ? "auto"
+              : width <= 360
+              ? 274
+              : 350,
+        }}
+        role="presentation"
+        style={{position :"realtive", height:"50vh"}}
 
-      //
-      // onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List style={{ height: "100%" }}>
-        {[
-          "Магазины",
-          "Все категории",
-          "Популярные продукты",
-          "Выгодные предложения",
-          "Расширение браузера",
-        ].map((text) => (
+        //
+        // onKeyDown={toggleDrawer(anchor, false)}
+      >
+        <div className={cls.closer}>
+          {" "}
+          <CloseOutlined onClick={() => setState(false)} />
+        </div>
+
+        <List style={{ height: "100%" }}>
+          {[
+            "Магазины",
+            "Все категории",
+            "Популярные продукты",
+            "Выгодные предложения",
+            "Расширение браузера",
+          ].map((text) => (
+            <ListItem
+              key={text}
+              style={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                textAlign: "justify",
+                alignItems: "flex-start",
+                paddingLeft: "50px",
+                position: "relative",
+                top: "100px",
+              }}
+            >
+              <ListItemButton>
+                <ListItemText
+                  primary={text}
+                  onClick={toggleDrawer(anchor, false)}
+                />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider style={{ opacity: "0" }} />
+      </Box>
+
+      <Box style={{position :"realtive", height:"50vh"}}>
+        <List style={{ height: "50%" }}>
           <ListItem
-            key={text}
             style={{
               width: "100%",
               display: "flex",
               flexDirection: "column",
-              textAlign: "justify",
-              alignItems: "flex-start",
-              paddingLeft: "50px",
-              position: "relative",
-              top: "100px",
+              textAlign: "center",
+              alignItems: "center",
+              gap: "30px",
+              position: "absolute",
+              top: "100%",
             }}
           >
-            <ListItemButton>
-              <ListItemText
-                primary={text}
-                onClick={toggleDrawer(anchor, false)}
-              />
+            <ListItemButton
+              style={{
+                width: "228px",
+                height: "50px",
+                textAlign: "center",
+                background: "#D9D9D9",
+                borderRadius: "3rem",
+              }}
+            >
+              <ListItemText>Зарегистрироваться</ListItemText>
+            </ListItemButton>
+            <ListItemButton
+              style={{
+                width: "228px",
+                height: "50px",
+                textAlign: "center",
+                background: "none",
+                border: "1px solid #000000",
+                borderRadius: "3rem",
+              }}
+            >
+              <ListItemText>Войти</ListItemText>
             </ListItemButton>
           </ListItem>
-        ))}
-      </List>
-      <Divider style={{ opacity: "0" }} />
-
-      <List style={{ height: "50%" }}>
-        <ListItem
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "center",
-            alignItems: "center",
-            gap: "30px",
-            position: "absolute",
-            bottom: "0%",
-          }}
-        >
-          <ListItemButton
-            style={{
-              width: "228px",
-              height: "50px",
-              textAlign: "center",
-              background: "#D9D9D9",
-              borderRadius: "3rem",
-            }}
-          >
-            <ListItemText>Зарегистрироваться</ListItemText>
-          </ListItemButton>
-          <ListItemButton
-            style={{
-              width: "228px",
-              height: "50px",
-              textAlign: "center",
-              background: "none",
-              border: "1px solid #000000",
-              borderRadius: "3rem",
-            }}
-          >
-            <ListItemText>Войти</ListItemText>
-          </ListItemButton>
-        </ListItem>
-      </List>
-    </Box>
+        </List>
+      </Box>
+    </div>
   );
 
   return (
