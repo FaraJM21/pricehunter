@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "./style.scss";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 // import required modules
 import { Pagination } from "swiper";
 import { arr } from "../../data/data";
@@ -18,6 +19,7 @@ export default function PaginationCarousel() {
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
+    Aos.init({ duration: 3000, delay: 10 });
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -38,7 +40,7 @@ export default function PaginationCarousel() {
         {data.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="imgbox"> 
+              <div className="imgbox" data-aos="zoom-in"> 
               </div>
             </SwiperSlide>
           );

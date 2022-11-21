@@ -1,5 +1,5 @@
 import { SearchOutlined } from "@ant-design/icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../../assets/pricehunter logo 1.svg";
 import logo2 from "../../assets/pricehunter logo 2.svg";
@@ -13,25 +13,43 @@ function Header() {
   const [value, setValue] = useState("");
   let rus = /[А-з]/gi;
   let eng = /[A-z]/gi;
-
   let navigate = useNavigate();
+  const [scroll, setScroll] = useState("");
+
+  const controlNavbar = () => {
+    if (window.scrollY > 20) {
+      setScroll("rgba(0, 0, 0, 0.24) 0px 3px 8px");
+    } else if (window.scrollY === 0) {
+      setScroll(" ");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
 
   const handleDown = (e) => {
     if ((value.match(eng) || value.match(rus)) && e.key === "Enter") {
       setValue(e.target.value);
       navigate(`/search/${value}`, { state: value });
-      setValue("")
+      setValue("");
     }
   };
 
   const handleClick = () => {
     if (value.match(eng) || value.match(rus)) {
       navigate(`/search/${value}`, { state: value });
-      setValue("")
+      setValue("");
     }
   };
   return (
-    <header className={cls.header}>
+    <header
+      className={cls.header}
+      style={{ boxShadow: scroll, transition: "0.5s" }}
+    >
       <nav className={cls.nav}>
         <div className={cls.inner}>
           <TemporaryDrawer />
@@ -59,8 +77,9 @@ function Header() {
         <div className={cls.wrapper}>
           <Selects />
           <SelectSec />
-          <Link to={'products'}>Выгодние Предложения</Link>
-          <Link to={'/sentence'}>Предложения</Link>
+
+          <Link to={"products"}>Выгодние Предложения</Link>
+          <Link to={"/sentence"}>Предложения</Link>
 
           <div id={cls.icon}>
             <BsFillPersonFill />

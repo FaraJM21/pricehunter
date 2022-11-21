@@ -93,7 +93,21 @@
 .img {
   width: 33.3%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  transform: translateZ(60px);
+  cursor: pointer;
+}
+
+.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  transform-style: preserve-3d;
 }
 
 @media (max-width: 1150px) {

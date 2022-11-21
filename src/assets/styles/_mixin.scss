@@ -1,0 +1,16 @@
+@mixin btnEffect {
+  background: linear-gradient(#dd0e1d, #dd0e1d);
+  transition: 500ms;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-size: 0 100%;
+  cursor: pointer;
+  border-radius: 25.5px;
+  border-color: #dd0e1d;
+}
+
+@mixin btnHover {
+  background-size: 100% 100%;
+  background-position-x: left;
+  color: #ffffff;
+}

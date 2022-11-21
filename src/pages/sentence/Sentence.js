@@ -1,8 +1,11 @@
 import { LeftOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ProductSec from "../../components/products/ProductSec";
 import { itemArr } from "../../data/data";
-import cls from "../../pages/products/products.module.scss"
+import cls from "../../pages/products/products.module.scss";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function Sentence() {
   const nums = [1, 2, 3, 4, 5];
   const [num, setNum] = useState(1);
@@ -10,6 +13,7 @@ function Sentence() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    Aos.init({ duration: 3000, delay: 10 });
   }, []);
   return (
     <div className={cls.products}>
@@ -19,11 +23,34 @@ function Sentence() {
         {arr.map((item, index) => {
           return (
             <div className={cls.card} key={index}>
-              <img src={item.img} alt="404" />
+              <img
+                src={item.img}
+                alt="404"
+                data-aos="zoom-in"
+                data-aos-anchor=".other-element"
+              />
               <div className={cls.info}>
-                <p className={cls.title}>{item.title}</p>
-                <p className={cls.price}>{item.price} сум</p>
-                <button>Cмотреть детали</button>
+                <p
+                  data-aos="fade-right"
+                  data-aos-anchor=".other-element"
+                  className={cls.title}
+                >
+                  {item.title}
+                </p>
+                <p
+                  data-aos="fade-right"
+                  data-aos-anchor=".other-element"
+                  className={cls.price}
+                >
+                  {item.price} сум
+                </p>
+                <Link to={"/about"}>
+                  {" "}
+                  <button data-aos="fade-up" data-aos-anchor=".other-element">
+                    {" "}
+                    Cмотреть детали{" "}
+                  </button>
+                </Link>
               </div>
             </div>
           );

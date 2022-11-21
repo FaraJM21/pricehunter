@@ -1,3 +1,5 @@
+@import "../../assets/styles/mixin";
+
 .main {
   width: 100%;
   margin-top: 10%;
@@ -109,7 +111,6 @@
   text-align: start;
   padding: 20px 20px;
   margin: 5% 0;
-  
 }
 
 .btns {
@@ -147,36 +148,23 @@ select {
 
 #btn1,
 #btn2 {
-  background: linear-gradient(#dd0e1d, #dd0e1d);
-  transition: 500ms;
-  background-repeat: no-repeat;
-  background-position-x: left;
-  background-size: 0 100%;
-  cursor: pointer;
+  @include btnEffect;
 }
 
 #btn1:hover,
 #btn2:hover {
-  background-size: 100% 100%;
-  background-position-x: left;
+  @include btnHover;
 }
 
 .container {
   button {
     width: 207px;
     height: 51px;
-    border-radius: 25.5px;
-    border-color: #dd0e1d;
-    background: linear-gradient(#dd0e1d, #dd0e1d);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    transition: 500ms;
-    cursor: pointer;
+    @include btnEffect;
   }
 
   button:hover {
-    background-size: 100% 100%;
+    @include btnHover;
   }
 }
 
@@ -191,6 +179,9 @@ select {
 }
 
 @media (max-width: 960px) {
+  .adTitle {
+    margin-top: 20%;
+  }
   .ads {
     justify-content: center;
   }
@@ -263,7 +254,8 @@ select {
 }
 
 @media (max-width: 618px) {
-  .ads, .adTitle{
+  .ads,
+  .adTitle {
     display: none;
   }
   .btn {
