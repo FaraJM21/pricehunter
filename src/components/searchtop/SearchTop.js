@@ -5,7 +5,7 @@ function SearchTop(props) {
     <div className={cls.top}>
       <div className={cls.result}>
         <h3>Результаты поиска:</h3>
-        {props.item.state}
+        <p>{props.item.state}</p>
       </div>
       <div className={cls.selects}>
         <div className={cls.select}>
@@ -20,18 +20,20 @@ function SearchTop(props) {
             <option value="смартфон">Смартфон</option>
           </select>
         </div>
+
         <div className={cls.select} id={cls.two}>
           <div className={cls.category}>
             {" "}
             <p>Сортировать по</p>
           </div>
 
-          <span>Цены:</span>
-          <select name="product">
-            <option defaultValue>низкие</option>
-            <option value="телефон"> высокие</option>
-            <option value="смартфон">низкие</option>
-          </select>
+          <div className={cls.price}>
+            <span>Цены:</span>
+            <select name="product">
+              <option defaultValue>низкие</option>
+              <option value="телефон"> высокие</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>

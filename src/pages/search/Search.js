@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Paginations from "../../components/pagination/Paginations";
 import SearchTop from "../../components/searchtop/SearchTop";
@@ -7,7 +7,9 @@ import cls from "./search.module.scss";
 function Search() {
   let item = useLocation();
   let data = arr;
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={cls.search}>
       <SearchTop item={item} />
@@ -24,13 +26,11 @@ function Search() {
             >
               <div className={cls.wrapper}>
                 <img src={product.img} alt="404" />
-
                 <div className={cls.info}>
                   <h3>{product.title}</h3>
 
                   <div className={cls.about}>
                     <p>Модель:</p>
-                    <button>Перейти в товар</button>
                   </div>
                 </div>
               </div>
@@ -55,6 +55,8 @@ function Search() {
                   </ul>
                 </div>
               </div>
+
+              <button>Перейти в товар</button>
             </div>
           );
         })}

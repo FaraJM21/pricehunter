@@ -47,17 +47,22 @@ html {
 
 body {
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
-
-@media (max-width:960px){
+@media (max-width: 960px) {
   html {
     font-size: 13px;
   }
- 
 }
 
-.app{
+@media (max-width: 590px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+.app {
   position: relative;
   // height: 100vh;
 }

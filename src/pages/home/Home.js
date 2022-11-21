@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import {
   Carousels,
@@ -11,6 +11,9 @@ import {
 
 import "./home.scss";
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="main">
       <h3 className="adTitle">Мы помогаем сохранить ваши деньги</h3>
@@ -44,8 +47,7 @@ function Home() {
 
       <Carousels />
 
-     
-        <PaginationCarousel />
+      <PaginationCarousel />
 
       <Shops />
 

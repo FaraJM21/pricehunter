@@ -32,7 +32,7 @@ export default function TemporaryDrawer() {
   };
 
   const list = (anchor) => (
-    <div style={{backgroundColor:"#B6B6B6"}}>
+    <div>
       <Box
         sx={{
           width:
@@ -43,7 +43,7 @@ export default function TemporaryDrawer() {
               : 350,
         }}
         role="presentation"
-        style={{position :"realtive", height:"50vh"}}
+        style={{ position: "realtive", height: "50vh" }}
 
         //
         // onKeyDown={toggleDrawer(anchor, false)}
@@ -86,7 +86,7 @@ export default function TemporaryDrawer() {
         <Divider style={{ opacity: "0" }} />
       </Box>
 
-      <Box style={{position :"realtive", height:"50vh"}}>
+      <Box style={{ position: "realtive", height: "50vh" }}>
         <List style={{ height: "50%" }}>
           <ListItem
             style={{

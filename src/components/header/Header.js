@@ -59,7 +59,8 @@ function Header() {
         <div className={cls.wrapper}>
           <Selects />
           <SelectSec />
-          <h4>Предложения</h4>
+          <Link to={'products'}>Выгодние Предложения</Link>
+          <Link to={'/sentence'}>Предложения</Link>
 
           <div id={cls.icon}>
             <BsFillPersonFill />

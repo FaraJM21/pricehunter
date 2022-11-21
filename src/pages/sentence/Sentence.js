@@ -1,20 +1,19 @@
 import { LeftOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
-import Product from "../../components/products/Product";
-
+import ProductSec from "../../components/products/ProductSec";
 import { itemArr } from "../../data/data";
-import cls from "./products.module.scss";
-function Products() {
+import cls from "../../pages/products/products.module.scss"
+function Sentence() {
   const nums = [1, 2, 3, 4, 5];
   const [num, setNum] = useState(1);
   const arr = itemArr;
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={cls.products}>
-      <Product />
+      <ProductSec />
 
       <div className={cls.wrapper}>
         {arr.map((item, index) => {
@@ -54,4 +53,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Sentence;

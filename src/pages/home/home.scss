@@ -1,6 +1,8 @@
 .main {
   width: 100%;
   margin-top: 10%;
+  position: relative;
+  z-index: 1;
 }
 
 .adTitle {
@@ -107,6 +109,7 @@
   text-align: start;
   padding: 20px 20px;
   margin: 5% 0;
+  
 }
 
 .btns {
@@ -126,6 +129,7 @@ select {
   height: 51px;
   border: 2px solid #dd0e1d;
   border-radius: 25.5px;
+  cursor: pointer;
 }
 
 .btn {
