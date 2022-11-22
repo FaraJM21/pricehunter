@@ -23,7 +23,7 @@ export default function PaginationCarousel() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  },[]);
   const data = arr;
   return (
     <div className="carousel">

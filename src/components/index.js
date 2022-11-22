@@ -7,4 +7,10 @@ export { default as SelectSec } from "./selects/SelectSec";
 export { default as Shops } from "./shops/Shops";
 export { default as MainBottom } from "./mainbottom/MainBottom";
 export { default as TemporaryDrawer } from "./temporarydrawer/TemporaryDrawer";
-export {default as Slider } from "./slider/Slider"
+export { default as Slider } from "./slider/Slider";
+export { default as AboutTop } from "./aboutTop/AboutTop";
+export { default as Offer } from "./offer/Offer";
+export { default as RadioButtons } from "./radio/RadioButton";
+export { default as Charts } from "./barchart/Charts";
+export { default as AboutInputs } from "./aboutInputs/AboutInputs";
+export { default as AboutBottom } from "./aboutBottom/AboutBottom";

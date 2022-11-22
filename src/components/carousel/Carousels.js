@@ -22,7 +22,7 @@ function Carousels() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  },[]);
 
   return (
     <>

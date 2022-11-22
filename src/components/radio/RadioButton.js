@@ -32,6 +32,7 @@ export default function ControlledRadioButtonsGroup() {
             />
           }
           label="alishop.uz"
+          labelPlacement="end"
         />
         <FormControlLabel
           value="mediapark"
@@ -46,6 +47,7 @@ export default function ControlledRadioButtonsGroup() {
             />
           }
           label="mediapark"
+          labelPlacement="end"
         />
       </RadioGroup>
     </FormControl>

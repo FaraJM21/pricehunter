@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 function Shops() {
   const data = arr;
   useEffect(() => {
-    Aos.init({ duration: 2000, delay: 10 });
+    Aos.init({ duration: 500, delay: 10 });
   }, []);
 
   return (

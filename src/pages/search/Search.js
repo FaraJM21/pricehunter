@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Paginations from "../../components/pagination/Paginations";
 import SearchTop from "../../components/searchtop/SearchTop";
 import { arr } from "../../data/data";
@@ -55,8 +55,8 @@ function Search() {
                   </ul>
                 </div>
               </div>
-
-              <button>Перейти в товар</button>
+              <Link to={"/about"}><button>Перейти в товар</button></Link>
+              
             </div>
           );
         })}
