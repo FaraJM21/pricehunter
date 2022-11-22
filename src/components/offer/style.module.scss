@@ -42,6 +42,11 @@
     border-radius: 22px;
     border: none;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  button:active{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #fc3b48;
   }
 }
 
