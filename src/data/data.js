@@ -190,3 +190,48 @@ export const itemArr = [
     oldPrice: "3.790.000",
   },
 ];
+
+export const shopArr = [
+  {
+    title: "Mediapark",
+    category: "Электроника",
+    price: "3.717.000",
+    date:"21.03.2022"
+  },
+
+  {
+    title: "Mediapark",
+    category: "Электроника",
+    price: "3.717.000",
+    date:"21.03.2022"
+  },
+
+  {
+    title: "Mediapark",
+    category: "Электроника",
+    price: "3.717.000",
+    date:"21.03.2022"
+  },
+
+  {
+    title: "Mediapark",
+    category: "Электроника",
+    price: "3.717.000",
+    date:"21.03.2022"
+  },
+
+  {
+    title: "Mediapark",
+    category: "Электроника",
+    price: "3.717.000",
+    date:"21.03.2022"
+  },
+
+  {
+    title: "Mediapark",
+    category: "Электроника",
+    price: "3.717.000",
+    date:"21.03.2022"
+  },
+ 
+];

@@ -146,9 +146,12 @@ select {
   width: 173px;
 }
 
+
+
 #btn1,
 #btn2 {
   @include btnEffect;
+  color: #000000;
 }
 
 #btn1:hover,

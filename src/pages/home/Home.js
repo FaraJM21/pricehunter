@@ -14,20 +14,37 @@ import "./home.scss";
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    Aos.init({ duration: 2000, delay: 10 });
-
+    Aos.init({ duration: 500, delay: 10 });
   }, []);
   return (
     <main className="main">
-      <h3 className="adTitle" data-aos="fade-right">Мы помогаем сохранить ваши деньги</h3>
+      <h3 className="adTitle" data-aos="fade-right">
+        Мы помогаем сохранить ваши деньги
+      </h3>
       <div className="ads">
         <div className="box">
-          <div className="card one" data-aos="fade-up" data-aos-anchor=".other-element"></div>
+          <div
+            className="card one"
+            data-aos="fade-up"
+            data-aos-anchor=".other-element"
+          ></div>
           <div className="cards-group">
-            <div className="cards" data-aos="fade-up" data-aos-anchor=".other-element"></div>
-            <div className="cards" data-aos="fade-up" data-aos-anchor=".other-element"></div>
+            <div
+              className="cards"
+              data-aos="fade-up"
+              data-aos-anchor=".other-element"
+            ></div>
+            <div
+              className="cards"
+              data-aos="fade-up"
+              data-aos-anchor=".other-element"
+            ></div>
           </div>
-          <div className="card two" data-aos="fade-up" data-aos-anchor=".other-element">
+          <div
+            className="card two"
+            data-aos="fade-up"
+            data-aos-anchor=".other-element"
+          >
             <div className="card-box">
               <div className="iconBox">
                 <BsFillPersonFill />
@@ -42,7 +59,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <Product  />
+
+      <Product />
 
       <Carousels />
 

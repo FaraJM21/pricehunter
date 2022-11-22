@@ -58,19 +58,17 @@
 
   .searchIcon {
     position: absolute;
-    top: 0;
-    right: 0%;
+    top: 1px;
+    right: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 36px;
     background-color: rgb(255, 255, 255);
     border-radius: 0 30px 30px 0;
     font-size: 1.3rem;
     cursor: pointer;
-    border-color: rgba(0, 0, 0, 0.5);
-    border-style: none solid solid none;
   }
 }
 

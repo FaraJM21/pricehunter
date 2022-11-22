@@ -16,7 +16,7 @@ function Carousels() {
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
-    Aos.init({ duration: 3000, delay: 10 });
+    Aos.init({ duration: 500, delay: 10 });
 
     window.addEventListener("resize", handleResize);
     return () => {

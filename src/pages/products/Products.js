@@ -14,7 +14,7 @@ function Products() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    Aos.init({ duration: 3000, delay: 10 });
+    Aos.init({ duration: 500, delay: 10 });
   }, [])
   return (
     <div className={cls.products}>
