@@ -8,10 +8,11 @@ import ListItemText from "@mui/material/ListItemText";
 import { Divider } from "antd";
 import cls from "../header/header.module.scss";
 import { CloseOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState(false);
   const [width, setWidth] = React.useState(window.innerWidth);
-
+  let navigate = useNavigate();
   React.useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -20,12 +21,13 @@ export default function TemporaryDrawer() {
     };
   });
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
+  const toggleDrawer = (anchor, open, text) => () => {
+    if (text === "Выгодние Предложения") {
+      navigate("/products");
+    } else if (text === "Предложения") {
+      navigate("/sentence");
+    } else {
+      setState(false);
     }
 
     setState({ ...state, [anchor]: open });
@@ -46,7 +48,6 @@ export default function TemporaryDrawer() {
         style={{ position: "realtive", height: "50vh" }}
 
         //
-        // onKeyDown={toggleDrawer(anchor, false)}
       >
         <div className={cls.closer}>
           {" "}
@@ -57,12 +58,12 @@ export default function TemporaryDrawer() {
           {[
             "Магазины",
             "Все категории",
-            "Популярные продукты",
-            "Выгодные предложения",
+            "Выгодние Предложения",
+            "Предложения",
             "Расширение браузера",
-          ].map((text) => (
+          ].map((text, index) => (
             <ListItem
-              key={text}
+              key={index}
               style={{
                 width: "100%",
                 display: "flex",
@@ -75,10 +76,9 @@ export default function TemporaryDrawer() {
               }}
             >
               <ListItemButton>
-                <ListItemText
-                  primary={text}
-                  onClick={toggleDrawer(anchor, false)}
-                />
+                <ListItemText onClick={toggleDrawer(anchor, false, text)}>
+                  {text}
+                </ListItemText>
               </ListItemButton>
             </ListItem>
           ))}
