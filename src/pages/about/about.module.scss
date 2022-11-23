@@ -41,7 +41,6 @@
 
 .details {
   width: 40%;
-
   margin: 0 5%;
   h3 {
     line-height: 3.4rem;
@@ -59,4 +58,23 @@
       line-height: 3.8rem;
     }
   }
+}
+
+
+@media (max-width:700px){
+  .btns{
+    width: 100%;
+    .btn1, .btn2{
+      width: 50%;
+    }
+  }
+
+  .details{
+   width: 100%;
+
+   .list{
+    justify-content: space-around;
+   }
+  }
+
 }

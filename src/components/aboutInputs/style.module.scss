@@ -79,3 +79,84 @@
     border-right: none;
   }
 }
+
+@media (max-width: 785px) {
+  .inputs {
+    width: 100%;
+    justify-content: space-around;
+    label {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .inputs {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    label {
+      width: 100%;
+      font-size: 0.9rem;
+      padding: 0 20px;
+
+      input,
+      select {
+        width: 100%;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+      }
+    }
+
+    .input input {
+      width: 70%;
+      padding: 0 10px;
+      left: 0;
+      right: 4%;
+      bottom: 0;
+      margin: auto;
+      // background-color: red;
+    }
+
+    .input {
+      span {
+        width: 13%;
+      }
+      button {
+        width: 16%;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .inputs {
+    .input {
+      input{
+        // background-color: blue;
+        width: 55%;
+        right:5%;
+        left: 0;
+        
+
+      }
+      span {
+        width: 20%;
+      }
+      button {
+        width: 25%;
+        height: 100%;
+        font-size: 0.9rem;
+        // background-color: red;
+      }
+    }
+  }
+}
+
+

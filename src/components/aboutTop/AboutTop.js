@@ -9,8 +9,8 @@ function AboutTop() {
       {data.slice(0, 1).map((item, index) => {
         return (
           <div className={cls.card} key={index}>
+            <img src={item.img} alt="404" />
             <div className={cls.wrapper}>
-              <img src={item.img} alt="404" />
               <div className={cls.info}>
                 <h3>{item.title}</h3>
 
@@ -26,18 +26,18 @@ function AboutTop() {
                   </h4>
                 </div>
               </div>
-            </div>
 
-            <div className={cls.inner}>
-              <div className={cls.price}>
-                <span>
-                  <AiOutlineHeart />
-                </span>
-                <h4>{item.price} сум</h4>
-                <p>{item.shop}</p>
-                <p>16.08.2022 13:43</p>
+              <div className={cls.inner}>
+                <div className={cls.price}>
+                  <span>
+                    <AiOutlineHeart />
+                  </span>
+                  <h4>{item.price} сум</h4>
+                  <p>{item.shop}</p>
+                  <p>16.08.2022 13:43</p>
+                </div>
+                <button>Перейти в товар</button>
               </div>
-              <button>Перейти в товар</button>
             </div>
           </div>
         );

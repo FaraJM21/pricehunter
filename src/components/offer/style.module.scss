@@ -44,7 +44,7 @@
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-  button:active{
+  button:active {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background: #fc3b48;
   }
@@ -66,6 +66,141 @@
     span {
       position: relative;
       top: 3%;
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+  height: 200px;
+  display: none;
+  justify-content: center;
+  #btn {
+    width: 50%;
+    height: 44px;
+    background: #dd0e1d;
+    border-radius: 22px;
+    border: none;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+.card {
+  position: relative;
+  width: 70%;
+  height: 350px;
+  border: 1px solid rgba(221, 14, 29, 0.3);
+  border-radius: 34px;
+  display: none;
+  justify-content: space-around;
+  // align-items: center;
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .right {
+    font-weight: 400;
+  }
+
+  button {
+    position: absolute;
+    width: 60%;
+    height: 45px;
+    bottom: 5%;
+    background: #dd0e1d;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  button:active {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #fc3b48;
+  }
+}
+
+@media (max-width: 700px) {
+  .offer {
+    position: relative;
+
+    h3,
+    h4 {
+      //  text-align: center;
+      padding: 0 15%;
+    }
+  }
+  .offer,
+  .items {
+    width: 100%;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .btn {
+    display: flex;
+  }
+
+  .items {
+    align-items: center;
+  }
+  .catalogue,
+  .item {
+    display: none;
+  }
+
+  .card {
+    display: flex;
+  }
+}
+
+@media (max-width: 440px) {
+  .offer {
+    h3,
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+  .card {
+    width: 80%;
+    height: 300px;
+    .left,
+    .right,
+    button {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .offer {
+    h3,
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+  .card {
+    width: 80%;
+    height: 250px;
+    .left,
+    .right,
+    button {
+      font-size: 1.2rem;
+    }
+
+    button {
+      width: 90%;
+      height: 40px;
     }
   }
 }

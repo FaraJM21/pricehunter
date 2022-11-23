@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { shopArr } from "../../data/data";
 import cls from "./style.module.scss";
 function Offer() {
   const shopItem = shopArr;
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={cls.offer}>
       <h3>4 других предложения</h3>
@@ -19,34 +23,76 @@ function Offer() {
         {show
           ? shopItem.map((item, index) => {
               return (
-                <div className={cls.item} key={index}>
-                  <p>{item.title}</p>
+                <>
+                  <div className={cls.card} index={index}>
+                    <div className={cls.left}>
+                      <p>Продавец</p>
+                      <p>Категория</p>
+                      <p>Цена</p>
+                      <p>Дата обновления</p>
+                    </div>
 
-                  <p>{item.category}</p>
+                    <div className={cls.right}>
+                      <p>{item.title}</p>
+                      <p>{item.category}</p>
+                      <p>{item.price}</p>
+                      <p>{item.date}</p>
+                    </div>
+                    <button>Перейти в Mediapark</button>
+                  </div>
+                  <div className={cls.item} key={index}>
+                    <p>{item.title}</p>
 
-                  <p>{item.price}</p>
+                    <p>{item.category}</p>
 
-                  <p>{item.date}</p>
+                    <p>{item.price}</p>
 
-                  <button>Перейти в Mediapark</button>
-                </div>
+                    <p>{item.date}</p>
+
+                    <button>Перейти в Mediapark</button>
+                  </div>
+                </>
               );
             })
           : shopItem.slice(0, 3).map((item, index) => {
               return (
-                <div className={cls.item} key={index}>
-                  <p>{item.title}</p>
+                <>
+                  <div className={cls.card} index={index}>
+                    <div className={cls.left}>
+                      <p>Продавец</p>
+                      <p>Категория</p>
+                      <p>Цена</p>
+                      <p>Дата обновления</p>
+                    </div>
 
-                  <p>{item.category}</p>
+                    <div className={cls.right}>
+                      <p>{item.title}</p>
+                      <p>{item.category}</p>
+                      <p>{item.price}</p>
+                      <p>{item.date}</p>
+                    </div>
+                    <button>Перейти в Mediapark</button>
+                  </div>
+                  <div className={cls.item} key={index}>
+                    <p>{item.title}</p>
 
-                  <p>{item.price}</p>
+                    <p>{item.category}</p>
 
-                  <p>{item.date}</p>
+                    <p>{item.price}</p>
 
-                  <button>Перейти в Mediapark</button>
-                </div>
+                    <p>{item.date}</p>
+
+                    <button>Перейти в Mediapark</button>
+                  </div>
+                </>
               );
             })}
+      </div>
+
+      <div className={cls.btn}>
+        <button id={cls.btn} onClick={() => setShow(!show)}>
+          {show ? "Скрыть" : "Показать ещё"}
+        </button>
       </div>
 
       <div className={cls.show} onClick={() => setShow(!show)}>

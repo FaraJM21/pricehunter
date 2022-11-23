@@ -6,23 +6,18 @@
     gap: 30px;
     padding: 100px 50px;
   }
+
+  .chart{
+    width: 60%;
+  }
   
   .container {
-    width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 400px;
   
-    .range {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: space-between;
-      h3 {
-        line-height: 2.5rem;
-      }
-    }
-  
+ 
     button {
       width: 11rem;
       height: 2.2rem;
@@ -32,4 +27,72 @@
     button:hover {
       @include btnHover;
     }
+  }
+
+  .range {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    h3 {
+      line-height: 2.5rem;
+    }
+  }
+
+
+
+  @media (max-width:1000px) {
+    .container{
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      height: auto;
+    }
+
+    .chart{
+      width: 100%;
+    }
+
+    .range{
+      width: 100%;
+      button{
+        width: 30%;
+        height: 50px;
+      }
+    }
+
+    .price{
+
+      height: 150px;
+    }
+    
+  }
+
+  
+
+  @media (max-width:600px) {
+    .container{
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      // height: auto;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .chart{
+      width: 100%;
+    }
+
+    .range{
+      width: 100%;
+      button{
+        width: 100%;
+        height: 50px;
+      }
+    }
+
+  
+    
   }

@@ -1,13 +1,14 @@
 import React from "react";
 import "./assets/styles/App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Layout, Products, Search, Sentence, About } from "./pages";
+import { Home, Layout, Products, Search, Sentence, About, NoPage } from "./pages";
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
         <Routes>
+          <Route path="*" element = {<NoPage/>}/>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/products" element={<Products />} />

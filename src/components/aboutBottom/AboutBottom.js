@@ -11,7 +11,7 @@ function AboutBottom(props) {
       <h3>История цены</h3>
 
       <div className={cls.container}>
-        <div className={cls.chart} style={{ width: "65%" }}>
+        <div className={cls.chart} >
           <Charts />
         </div>
 
