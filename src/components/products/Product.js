@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Product() {
   const [active, setActive] = useState(true);
+  
   return (
     <div className="products">
       <h3 className="product-title">Популярные товары</h3>
