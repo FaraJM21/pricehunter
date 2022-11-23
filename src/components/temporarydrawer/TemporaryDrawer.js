@@ -97,7 +97,7 @@ export default function TemporaryDrawer() {
               alignItems: "center",
               gap: "30px",
               position: "absolute",
-              top: "100%",
+              top: "80%",
             }}
           >
             <ListItemButton
