@@ -79,7 +79,7 @@ function Header() {
           <SelectSec />
 
           <Link to={"products"}>Выгодние Предложения</Link>
-          <Link to={"/sentence"}>Предложения</Link>
+          <Link to={"/offer"}>Предложения</Link>
 
           <div id={cls.icon}>
             <BsFillPersonFill />
