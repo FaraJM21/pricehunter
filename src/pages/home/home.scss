@@ -1,5 +1,14 @@
 @import "../../assets/styles/mixin";
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 0; 
+  left: auto;
+}
 
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 0;
+  right: auto;
+}
 .main {
   width: 100%;
   margin-top: 10%;

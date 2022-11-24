@@ -1,3 +1,4 @@
+import { Container } from "@mui/system";
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Paginations from "../../components/pagination/Paginations";
@@ -12,57 +13,61 @@ function Search() {
   }, []);
   return (
     <div className={cls.search}>
-      <SearchTop item={item} />
+      <Container>
+        <SearchTop item={item} />
 
-      <div className={cls.products}>
-        {data.slice(0, 5).map((product, index) => {
-          return (
-            <div
-              className={cls.card}
-              key={index}
-              style={{
-                borderBottom: index !== 4 ? "1px solid rgba(0, 0, 0, 0.3)" : "",
-              }}
-            >
-              <div className={cls.wrapper}>
-                <img src={product.img} alt="404" />
-                <div className={cls.info}>
-                  <h3>{product.title}</h3>
+        <div className={cls.products}>
+          {data.slice(0, 5).map((product, index) => {
+            return (
+              <div
+                className={cls.card}
+                key={index}
+                style={{
+                  borderBottom:
+                    index !== 4 ? "1px solid rgba(0, 0, 0, 0.3)" : "",
+                }}
+              >
+                <div className={cls.wrapper}>
+                  <img src={product.img} alt="404" />
+                  <div className={cls.info}>
+                    <h3>{product.title}</h3>
 
-                  <div className={cls.about}>
-                    <p>Модель:</p>
+                    <div className={cls.about}>
+                      <p>Модель:</p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className={cls.inner}>
-                <div className={cls.shop}>
-                  <h4>Магазин</h4>
-                  <ul>
-                    <li>{product.shop}</li>
-                    <li>{product.shop}</li>
-                    <li>{product.shop}</li>
-                    <li>ещё</li>
-                  </ul>
+                <div className={cls.inner}>
+                  <div className={cls.shop}>
+                    <h4>Магазин</h4>
+                    <ul>
+                      <li>{product.shop}</li>
+                      <li>{product.shop}</li>
+                      <li>{product.shop}</li>
+                      <li>ещё</li>
+                    </ul>
+                  </div>
+
+                  <div className={cls.shop}>
+                    <h4>Текущая цена:</h4>
+                    <ul>
+                      <li>{product.oldPrice} сум</li>
+                      <li>Нет в наличии</li>
+                      <li>{product.oldPrice} сум</li>
+                    </ul>
+                  </div>
                 </div>
-
-                <div className={cls.shop}>
-                  <h4>Текущая цена:</h4>
-                  <ul>
-                    <li>{product.oldPrice} сум</li>
-                    <li>Нет в наличии</li>
-                    <li>{product.oldPrice} сум</li>
-                  </ul>
-                </div>
+                <Link to={"/about"}>
+                  <button>Перейти в товар</button>
+                </Link>
               </div>
-              <Link to={"/about"}><button>Перейти в товар</button></Link>
-              
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      <Paginations />
+        <Paginations />
+      </Container>
     </div>
   );
 }

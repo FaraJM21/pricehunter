@@ -39,7 +39,6 @@ function Carousels() {
     <Container>
       <Swiper
         slidesPerView={num}
-        spaceBetween = {30}
         freeMode={width <= 800 ? false : true}
         navigation={width <= 800 ? false : true}
         pagination={width <= 800 ? true : false}
@@ -47,25 +46,24 @@ function Carousels() {
         id={cls.myswiper}
         style={{
           "--swiper-navigation-color": "#DD0E1D",
+          "--swiper-navigation-size": "30px",
         }}
       >
         {data.map((item, index) => {
           return (
-            <Container>
-              <SwiperSlide key={index}>
-                <div className={cls.card}>
-                  <img src={item.img} alt="404" />
-                  <div className={cls.info}>
-                    <p className={cls.title}>{item.title}</p>
-                    <p className={cls.price}>{item.price} сум</p>
-                    <Link to={"/about"}>
-                      {" "}
-                      <button> Cмотреть детали </button>
-                    </Link>
-                  </div>
+            <SwiperSlide key={index}>
+              <div className={cls.card}>
+                <img src={item.img} alt="404" />
+                <div className={cls.info}>
+                  <p className={cls.title}>{item.title}</p>
+                  <p className={cls.price}>{item.price} сум</p>
+                  <Link to={"/about"}>
+                    {" "}
+                    <button> Cмотреть детали </button>
+                  </Link>
                 </div>
-              </SwiperSlide>
-            </Container>
+              </div>
+            </SwiperSlide>
           );
         })}
       </Swiper>
