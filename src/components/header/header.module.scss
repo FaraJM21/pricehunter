@@ -1,4 +1,6 @@
 .header {
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
   position: fixed;
   top: 0;
@@ -44,6 +46,7 @@
 
 .search {
   position: relative;
+  display: flex;
   input {
     width: 250px;
     height: 40px;
@@ -73,10 +76,10 @@
 }
 
 .wrapper {
-  // width: 60%;
+  // width:55%;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   height: 100%;
 
@@ -88,12 +91,8 @@
     line-height: 1rem;
   }
 
-  #icon {
-    width: 1.8rem;
-    height: 24px;
-    font-size: 1.3rem;
-    border: 2px solid #000000;
-    border-radius: 20%;
+  img {
+    cursor: pointer;
   }
 }
 

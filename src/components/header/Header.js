@@ -6,10 +6,10 @@ import logo2 from "../../assets/pricehunter logo 2.svg";
 import logo3 from "../../assets/logo3.svg";
 import Selects from "../selects/Selects";
 import SelectSec from "../selects/SelectSec";
-import { BsFillPersonFill } from "react-icons/bs";
 import cls from "./header.module.scss";
 import TemporaryDrawer from "../temporarydrawer/TemporaryDrawer";
 import { Container } from "@mui/material";
+import user from '../../assets/user.svg'
 function Header() {
   const [value, setValue] = useState("");
   let rus = /[А-з]/gi;
@@ -83,9 +83,7 @@ function Header() {
             <Link to={"products"}>Выгодние Предложения</Link>
             <Link to={"/offer"}>Предложения</Link>
 
-            <div id={cls.icon}>
-              <BsFillPersonFill />
-            </div>
+            <img src={user} alt="404" />
           </div>
         </nav>
       </Container>
