@@ -1,15 +1,18 @@
 .footer {
-  top: 100%;
   position: absolute;
-  width: 100%;
+  right: 0;
+  left: 0;
+  top: 100%;
+  margin: auto;
+  // width: 100%;
   background: #8f8f8fad;
   height: 50vh;
-  margin: 5% 0;
   padding: 0 50px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 4%;
 }
 .inner {
-  width: 100%;
+  // width: 100%;
   display: flex;
   justify-content: flex-start;
   height: 50%;
@@ -41,6 +44,7 @@
   }
 }
 
+
 @media (max-width: 1000px) {
   .inner {
     width: 60%;
@@ -56,3 +60,6 @@
     flex-wrap: wrap;
   }
 }
+
+
+

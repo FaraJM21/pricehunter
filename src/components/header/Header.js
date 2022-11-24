@@ -9,6 +9,7 @@ import SelectSec from "../selects/SelectSec";
 import { BsFillPersonFill } from "react-icons/bs";
 import cls from "./header.module.scss";
 import TemporaryDrawer from "../temporarydrawer/TemporaryDrawer";
+import { Container } from "@mui/material";
 function Header() {
   const [value, setValue] = useState("");
   let rus = /[А-з]/gi;
@@ -50,42 +51,44 @@ function Header() {
       className={cls.header}
       style={{ boxShadow: scroll, transition: "0.5s" }}
     >
-      <nav className={cls.nav}>
-        <div className={cls.inner}>
-          <TemporaryDrawer />
-          <Link to={"/"}>
-            <div className={cls.logo}>
-              <img src={logo2} alt="404" className={cls.logo_1} />
-              <img src={logo1} alt="404" className={cls.logo_1} />
-              <img src={logo3} alt="404" className={cls.logo_res} />
-            </div>
-          </Link>
+      <Container>
+        <nav className={cls.nav}>
+          <div className={cls.inner}>
+            <TemporaryDrawer />
+            <Link to={"/"}>
+              <div className={cls.logo}>
+                <img src={logo2} alt="404" className={cls.logo_1} />
+                <img src={logo1} alt="404" className={cls.logo_1} />
+                <img src={logo3} alt="404" className={cls.logo_res} />
+              </div>
+            </Link>
 
-          <div className={cls.search}>
-            <input
-              type={cls.text}
-              onKeyDown={(e) => handleDown(e)}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-            />
-            <div className={cls.searchIcon}>
-              <SearchOutlined onClick={handleClick} />
+            <div className={cls.search}>
+              <input
+                type={cls.text}
+                onKeyDown={(e) => handleDown(e)}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+              />
+              <div className={cls.searchIcon}>
+                <SearchOutlined onClick={handleClick} />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className={cls.wrapper}>
-          <Selects />
-          <SelectSec />
+          <div className={cls.wrapper}>
+            <Selects />
+            <SelectSec />
 
-          <Link to={"products"}>Выгодние Предложения</Link>
-          <Link to={"/offer"}>Предложения</Link>
+            <Link to={"products"}>Выгодние Предложения</Link>
+            <Link to={"/offer"}>Предложения</Link>
 
-          <div id={cls.icon}>
-            <BsFillPersonFill />
+            <div id={cls.icon}>
+              <BsFillPersonFill />
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </Container>
     </header>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import {
   Carousels,
@@ -8,52 +8,23 @@ import {
   Shops,
   MainBottom,
 } from "../../components/index";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 import "./home.scss";
 function Home() {
-  const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
     window.scrollTo(0, 0);
-    const handleResize = () => setWidth(window.innerWidth);
-
-    Aos.init({ duration: 500, delay: 10 });
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
   return (
     <main className="main">
-      <h3 className="adTitle" data-aos={width <= 500 ? "fade-right" : ''}>
-        Мы помогаем сохранить ваши деньги
-      </h3>
+      <h3 className="adTitle">Мы помогаем сохранить ваши деньги</h3>
       <div className="ads">
         <div className="box">
-          <div
-            className="card one"
-            data-aos="fade-up"
-            data-aos-anchor=".other-element"
-          ></div>
+          <div className="card one"></div>
           <div className="cards-group">
-            <div
-              className="cards"
-              data-aos="fade-up"
-              data-aos-anchor=".other-element"
-            ></div>
-            <div
-              className="cards"
-              data-aos="fade-up"
-              data-aos-anchor=".other-element"
-            ></div>
+            <div className="cards"></div>
+            <div className="cards"></div>
           </div>
-          <div
-            className="card two"
-            data-aos="fade-up"
-            data-aos-anchor=".other-element"
-          >
+          <div className="card two">
             <div className="card-box">
               <div className="iconBox">
                 <BsFillPersonFill />
@@ -70,7 +41,6 @@ function Home() {
       </div>
 
       <Product />
-
       <Carousels />
 
       <ProductSec />

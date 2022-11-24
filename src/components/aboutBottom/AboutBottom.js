@@ -8,10 +8,10 @@ function AboutBottom(props) {
       className={cls.aboutBottom}
       style={{ display: props.details ? "none" : "flex" }}
     >
-      <h3>История цены</h3>
+      <h3 className={cls.title}>История цены</h3>
 
       <div className={cls.container}>
-        <div className={cls.chart} >
+        <div className={cls.chart}>
           <Charts />
         </div>
 

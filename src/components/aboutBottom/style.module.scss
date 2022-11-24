@@ -1,98 +1,94 @@
 @import "../../assets/styles/mixin";
 .aboutBottom {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 100px 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 100px 50px;
+}
+
+.chart {
+  width: 60%;
+}
+
+.title {
+  line-height: 3rem;
+  position: relative;
+  left: 2%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+
+  button {
+    width: 11rem;
+    height: 2.2rem;
+    @include btnEffect;
   }
 
-  .chart{
-    width: 60%;
+  button:hover {
+    @include btnHover;
   }
-  
+}
+
+.range {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  h3 {
+    line-height: 2.5rem;
+  }
+}
+
+@media (max-width: 1000px) {
   .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: auto;
+  }
+
+  .chart {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    height: 400px;
-  
- 
-    button {
-      width: 11rem;
-      height: 2.2rem;
-      @include btnEffect;
-    }
-  
-    button:hover {
-      @include btnHover;
-    }
   }
 
   .range {
-    width: 300px;
-    display: flex;
+    width: 100%;
+    button {
+      width: 30%;
+      height: 50px;
+    }
+  }
+
+  .price {
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
     flex-direction: column;
-    height: 100%;
+    align-items: center;
+    gap: 30px;
+    // height: auto;
     justify-content: space-between;
-    h3 {
-      line-height: 2.5rem;
-    }
+    height: 100%;
   }
 
-
-
-  @media (max-width:1000px) {
-    .container{
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      height: auto;
-    }
-
-    .chart{
-      width: 100%;
-    }
-
-    .range{
-      width: 100%;
-      button{
-        width: 30%;
-        height: 50px;
-      }
-    }
-
-    .price{
-
-      height: 150px;
-    }
-    
+  .chart {
+    width: 100%;
   }
 
-  
-
-  @media (max-width:600px) {
-    .container{
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      // height: auto;
-      justify-content: space-between;
-      height: 100%;
-    }
-
-    .chart{
+  .range {
+    width: 100%;
+    button {
       width: 100%;
+      height: 50px;
     }
-
-    .range{
-      width: 100%;
-      button{
-        width: 100%;
-        height: 50px;
-      }
-    }
-
-  
-    
   }
+}

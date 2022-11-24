@@ -7,11 +7,11 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "./style.scss";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 // import required modules
 import { Pagination } from "swiper";
 import { arr } from "../../data/data";
+import { Container } from "@mui/system";
 
 export default function PaginationCarousel() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -29,7 +29,7 @@ export default function PaginationCarousel() {
     } else {
       setNum(4);
     }
-    Aos.init({ duration: 3000, delay: 10 });
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -37,24 +37,26 @@ export default function PaginationCarousel() {
   const data = arr;
   return (
     <div className="carousel">
-      <h3 className="product-title">Лучшее падение цен</h3>
-      <Swiper
-        slidesPerView={num}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="swiper"
-      >
-        {data.map((item, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <div className="imgbox" data-aos="zoom-in"></div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <Container>
+        <h3 className="product-title">Лучшее падение цен</h3>
+        <Swiper
+          slidesPerView={num}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="swiper"
+        >
+          {data.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="imgbox"></div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </Container>
     </div>
   );
 }
