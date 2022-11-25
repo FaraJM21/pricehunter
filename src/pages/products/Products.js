@@ -12,8 +12,9 @@ function Products() {
   const arr = itemArr;
   const [windowSize, setWindowSize] = useState(undefined);
   const [spanNum, setSpan] = useState(24);
-
+ 
   useEffect(() => {
+    window.scrollTo(0, 0);
     // Handler to call on window resize
     function handleResize() {
       // Set window width/height to state

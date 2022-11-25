@@ -15,6 +15,7 @@ function Sentence() {
   const [spanNum, setSpan] = useState(24);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     // Handler to call on window resize
     function handleResize() {
       // Set window width/height to state
@@ -42,7 +43,7 @@ function Sentence() {
           {arr.map((item, index) => {
             return (
               <Col span={spanNum} id={cls.col} key={index}>
-                <div className={cls.card} >
+                <div className={cls.card}>
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>
