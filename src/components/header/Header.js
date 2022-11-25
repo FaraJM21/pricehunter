@@ -71,6 +71,7 @@ function Header() {
                 type={cls.text}
                 onKeyDown={(e) => handleDown(e)}
                 value={value}
+                placeholder = "Поиск..."
                 onChange={(e) => setValue(e.target.value)}
               />
               <div className={cls.searchIcon}>
