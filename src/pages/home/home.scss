@@ -308,4 +308,12 @@ select {
   .main {
     margin-top: 35%;
   }
+
+  .card-box{
+    width: 95%;
+    gap: 10px;
+    .text{
+      width: 70%;
+    }
+  }
 }
