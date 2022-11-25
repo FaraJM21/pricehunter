@@ -25,7 +25,7 @@ export default function TemporaryDrawer() {
     if (text === "Выгодние Предложения") {
       navigate("/products");
     } else if (text === "Предложения") {
-      navigate("/sentence");
+      navigate("/offer");
     } else {
       setState(false);
     }
@@ -57,9 +57,9 @@ export default function TemporaryDrawer() {
         <List style={{ height: "100%" }}>
           {[
             "Магазины",
-            "Все категории",
-            "Выгодние Предложения",
             "Предложения",
+            "Выгодние Предложения",
+            "Все категории",
             "Расширение браузера",
           ].map((text, index) => (
             <ListItem

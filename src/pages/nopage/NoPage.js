@@ -4,7 +4,6 @@ import cls from "./style.module.scss";
 function NoPage() {
   return (
     <div className={cls.nopage}>
-
       <lottie-player
         src="https://assets3.lottiefiles.com/datafiles/sPJTLSWjrBGgvJK/data.json"
         background="transparent"
@@ -14,7 +13,10 @@ function NoPage() {
         autoplay
       ></lottie-player>
 
-          <Link to={'/'}> <button>Home</button> </Link>
+      <Link to={"/"}>
+        {" "}
+        <button>Home</button>{" "}
+      </Link>
     </div>
   );
 }

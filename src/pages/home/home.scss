@@ -1,11 +1,12 @@
 @import "../../assets/styles/mixin";
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 0; 
+  right: 0;
   left: auto;
 }
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next {
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
   left: 0;
   right: auto;
 }
@@ -183,7 +184,7 @@ select {
 
 .carousel {
   margin: 5% 0;
-  height: 350px;
+  height: 460px;
 }
 .product-title {
   position: relative;
@@ -279,5 +280,11 @@ select {
     .btn2 {
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .main {
+    margin-top: 25%;
   }
 }

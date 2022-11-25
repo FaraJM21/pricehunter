@@ -97,8 +97,10 @@
   .inputs {
     width: 100%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 30px;
+    height: 380px;
 
     label {
       width: 100%;
@@ -141,14 +143,11 @@
 @media (max-width: 420px) {
   .inputs {
     .input {
-      input{
+      input {
         // background-color: blue;
         width: 55%;
-        right:5%;
+        right: 5%;
         left: 0;
-      
-        
-
       }
       span {
         width: 20%;
@@ -163,5 +162,3 @@
     }
   }
 }
-
-

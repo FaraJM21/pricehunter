@@ -1,4 +1,4 @@
- import {FiSearch} from 'react-icons/fi'
+import { FiSearch } from "react-icons/fi";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../../assets/pricehunter logo 1.svg";
@@ -9,7 +9,7 @@ import SelectSec from "../selects/SelectSec";
 import cls from "./header.module.scss";
 import TemporaryDrawer from "../temporarydrawer/TemporaryDrawer";
 import { Container } from "@mui/material";
-import user from '../../assets/user.svg'
+import user from "../../assets/user.svg";
 function Header() {
   const [value, setValue] = useState("");
   let rus = /[А-з]/gi;

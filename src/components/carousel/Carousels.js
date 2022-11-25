@@ -18,9 +18,9 @@ function Carousels() {
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
 
-    if (width <= 900 && width > 650) {
+    if (width <= 900 && width > 700) {
       setNum(3);
-    } else if (width <= 650 && width > 550) {
+    } else if (width <= 700 && width > 550) {
       setNum(2);
     } else if (width <= 550) {
       setNum(1);

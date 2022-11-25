@@ -1,6 +1,6 @@
 import { Select } from "antd";
 import React from "react";
-import  cls from "../header/header.module.scss"
+import cls from "../header/header.module.scss";
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
@@ -12,7 +12,7 @@ const SelectSec = () => (
       width: 140,
     }}
     onChange={handleChange}
-    className = {cls.select}
+    className={cls.select}
     options={[
       {
         value: "телефон",

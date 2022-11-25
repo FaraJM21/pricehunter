@@ -7,7 +7,6 @@
   // width: 100%;
   background: #8f8f8fad;
   height: 50vh;
-  padding: 0 50px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-top: 4%;
 }
@@ -44,7 +43,6 @@
   }
 }
 
-
 @media (max-width: 1000px) {
   .inner {
     width: 60%;
@@ -60,6 +58,3 @@
     flex-wrap: wrap;
   }
 }
-
-
-

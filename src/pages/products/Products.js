@@ -10,24 +10,19 @@ function Products() {
   const nums = [1, 2, 3, 4, 5];
   const [num, setNum] = useState(1);
   const arr = itemArr;
-  const [windowSize, setWindowSize] = useState( undefined);
- const [spanNum, setSpan] = useState(24)
-
+  const [windowSize, setWindowSize] = useState(undefined);
+  const [spanNum, setSpan] = useState(24);
 
   useEffect(() => {
     // Handler to call on window resize
     function handleResize() {
       // Set window width/height to state
-      setWindowSize(
-     window.innerWidth
-      )
+      setWindowSize(window.innerWidth);
 
-      if(windowSize <= 650){
-        setSpan(24)
-      }
-
-      else{
-        setSpan(6)
+      if (windowSize <= 650) {
+        setSpan(24);
+      } else {
+        setSpan(6);
       }
     }
     // Add event listener
@@ -45,7 +40,7 @@ function Products() {
         <Row id={cls.row} wrap={true} justify="center">
           {arr.map((item, index) => {
             return (
-              <Col span={spanNum} id ={cls.col}>
+              <Col span={spanNum} id={cls.col}>
                 <div className={cls.card} key={index}>
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>

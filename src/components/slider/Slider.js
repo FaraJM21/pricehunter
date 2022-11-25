@@ -40,7 +40,6 @@ export default function DiscreteSliderMarks() {
         sx={{
           color: red[600],
           height: 10,
-          
         }}
       />
     </Box>
