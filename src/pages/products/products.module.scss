@@ -7,19 +7,17 @@
   gap: 20px;
   position: relative;
   // padding: 80px 0;
-   margin: 30px 0;
+  margin: 30px 0;
   a {
     text-decoration: none;
   }
 }
 
-.wrapper {
-  width: 95%;
-  margin: auto;
+#row {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 150px;
 }
 
 .card:hover {
@@ -33,7 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  transition: 0.7s all;
+  transition: 0.3s;
   border-radius: 10px;
   cursor: pointer;
   // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -101,102 +99,72 @@
   }
 }
 
-@media (max-width: 780px) {
-  .wrapper {
-    justify-content: space-around;
-  }
-
-  .info {
-    button {
-      width: 9rem;
-      height: 3rem;
-      font-size: 0.9rem;
-    }
+@media (max-width: 1106px) {
+  .card {
+    width: 13rem;
+    height: 20rem;
   }
 }
 
-@media (max-width: 617px) {
-  .wrapper {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 960px) {
+  #row {
+    justify-content: space-evenly;
+    gap: 30px;
+    row-gap: 60px;
   }
-
-  .title,
-  .price {
-    font-size: 1.8rem;
-  }
-
   .card {
-    width: 50%;
-    height: 380px;
+    width: 15rem;
+    height: 24rem;
   }
+}
 
-  .info {
+@media (max-width: 700px) {
+  #row {
+    justify-content: space-evenly;
+    gap: 90px;
+  }
+  .card {
+    width: 15rem;
+    height: 24rem;
+  }
+}
+
+@media (max-width: 650px) {
+  #row {
+    justify-content: center;
+    row-gap: 90px;
+  }
+  #col {
     width: 100%;
-    a {
+    flex: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+
+    .card {
       width: 60%;
-      display: flex;
-      justify-content: center;
-    }
-    button {
-      width: 100%;
-      height: 3.5rem;
-      font-size: 0.9rem;
-    }
-  }
-}
-
-@media (max-width: 460px) {
-  .wrapper {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 50%;
-    height: 300px;
-  }
-
-  .title,
-  .price {
-    font-size: 1.4rem;
-  }
-
-  .info {
-    width: 100%;
-    a {
-      width: 80%;
-      display: flex;
-      justify-content: center;
-    }
-    button {
-      width: 100%;
-      height: 35px;
-      font-size: 0.9rem;
+      height: 450px;
+      p {
+        font-size: 1.5rem;
+      }
+      button {
+        width: 200px;
+      }
     }
   }
 }
 
-@media (max-width: 350px) {
-  .card {
-    height: 250px;
-
-    img {
-      height: 80%;
+@media (max-width: 400px) {
+  #row {
+    #col {
+      height: 350px;
     }
-  }
-  .info {
-    width: 100%;
-    button {
+    .card {
       width: 80%;
-      height: 25px;
-      font-size: 0.9rem;
+      height: 100%;
+      button {
+        width: 14.5rem;
+      }
     }
-  }
-
-  .inner {
-    width: 95%;
   }
 }

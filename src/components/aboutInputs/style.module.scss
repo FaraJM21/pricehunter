@@ -1,7 +1,8 @@
 @import "../../assets/styles/mixin";
 .inputs {
-  width: 90%;
+  width: 100%;
   display: flex;
+  height: 150px;
   justify-content: space-between;
   margin: auto;
 
@@ -27,14 +28,15 @@
     height: 50px;
 
     input {
-      width: 50%;
+      width: 45%;
       height: 100%;
       position: absolute;
-      left: 18%;
+      left: 19%;
       bottom: 0;
       margin: auto;
       border: none;
       outline: none;
+      padding: 0 10px;
     }
 
     span,
@@ -84,6 +86,7 @@
   .inputs {
     width: 100%;
     justify-content: space-around;
+    height: 300px;
     label {
       font-size: 0.9rem;
     }
@@ -143,6 +146,7 @@
         width: 55%;
         right:5%;
         left: 0;
+      
         
 
       }
@@ -150,6 +154,7 @@
         width: 20%;
       }
       button {
+        font-size: 1rem;
         width: 25%;
         height: 100%;
         font-size: 0.9rem;

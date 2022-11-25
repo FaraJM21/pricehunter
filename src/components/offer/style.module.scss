@@ -1,22 +1,25 @@
 .offer {
   width: 90%;
-  margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  h3 {
-    line-height: 3rem;
-    position: relative;
-    right: 2%;
-  }
+  margin: auto;
+  gap: 15px;
+  max-width: 1200px;
 }
 .catalogue {
-  width: 75%;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   font-size: 1rem;
   font-weight: 500;
+  gap: 50px;
+
+  .params {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .items {
   width: 100%;
@@ -36,13 +39,15 @@
   font-size: 1rem;
 
   button {
-    width: 233px;
-    height: 44px;
+    position: relative;
+    width: 10rem;
+    height: 2.8rem;
     background: #dd0e1d;
     border-radius: 22px;
     border: none;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    left: 4%;
   }
   button:active {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -76,7 +81,7 @@
   display: none;
   justify-content: center;
   #btn {
-    width: 50%;
+    width: 70%;
     height: 44px;
     background: #dd0e1d;
     border-radius: 22px;
@@ -88,7 +93,7 @@
 
 .card {
   position: relative;
-  width: 70%;
+  width: 80%;
   height: 350px;
   border: 1px solid rgba(221, 14, 29, 0.3);
   border-radius: 34px;
@@ -111,7 +116,7 @@
 
   button {
     position: absolute;
-    width: 60%;
+    width: 70%;
     height: 45px;
     bottom: 5%;
     background: #dd0e1d;
@@ -173,33 +178,20 @@
   }
   .card {
     width: 80%;
-    height: 300px;
-    .left,
-    .right,
-    button {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-@media (max-width: 440px) {
-  .offer {
-    h3,
-    h4 {
-      font-size: 1.5rem;
-    }
-  }
-  .card {
-    width: 80%;
     height: 250px;
     .left,
     .right,
     button {
       font-size: 1.2rem;
     }
+    .btn {
+      #btn {
+        width: 80%;
+      }
+    }
 
     button {
-      width: 90%;
+      width: 60%;
       height: 40px;
     }
   }

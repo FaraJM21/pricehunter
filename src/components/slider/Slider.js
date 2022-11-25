@@ -6,19 +6,19 @@ import "./style.scss";
 
 const marks = [
   {
-    value: 20,
+    value: 25,
     label: "1M",
   },
   {
-    value: 40,
+    value: 50,
     label: "3M",
   },
   {
-    value: 60,
+    value: 75,
     label: "6M",
   },
   {
-    value: 100,
+    value: 98,
     label: "все время",
   },
 ];
@@ -32,15 +32,15 @@ export default function DiscreteSliderMarks() {
     <Box sx={{ width: "100%" }} className="slider">
       <Slider
         aria-label="Custom marks"
-        defaultValue={20}
+        defaultValue={25}
         getAriaValueText={valuetext}
-        step={20}
+        step={25}
         valueLabelDisplay="auto"
         marks={marks}
         sx={{
           color: red[600],
           height: 10,
-          //  thumb: grey[600]
+          
         }}
       />
     </Box>

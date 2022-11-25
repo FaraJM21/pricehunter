@@ -2,10 +2,15 @@
 
 .MuiSlider-rail {
   color: silver;
+  height: 15px !important;
 }
 .slider{
     .MuiSlider-rail  {
         width: 100%;
         height: 10px;
     }
+}
+
+.MuiSlider-mark {
+ display: none;
 }

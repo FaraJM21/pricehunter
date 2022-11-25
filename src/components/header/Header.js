@@ -1,4 +1,4 @@
-import { SearchOutlined } from "@ant-design/icons";
+ import {FiSearch} from 'react-icons/fi'
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../../assets/pricehunter logo 1.svg";
@@ -71,7 +71,7 @@ function Header() {
                 onChange={(e) => setValue(e.target.value)}
               />
               <div className={cls.searchIcon}>
-                <SearchOutlined onClick={handleClick} />
+                <FiSearch onClick={handleClick} />
               </div>
             </div>
           </div>

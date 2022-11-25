@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { shopArr } from "../../data/data";
 import cls from "./style.module.scss";
 function Offer() {
@@ -11,12 +11,15 @@ function Offer() {
   }, []);
   return (
     <div className={cls.offer}>
-      <h3>4 других предложения</h3>
       <div className={cls.catalogue}>
-        <p>Продавец</p>
-        <p>Категория</p>
-        <p>Цена</p>
-        <p>Дата обновления</p>
+        <h3>4 других предложения</h3>
+
+        <div className={cls.params}>
+          <p>Продавец</p>
+          <p>Категория</p>
+          <p>Цена</p>
+          <p>Дата обновления</p>
+        </div>
       </div>
 
       <div className={cls.items}>
@@ -100,14 +103,14 @@ function Offer() {
           <h4>
             Скрыть{" "}
             <span>
-              <AiOutlineArrowUp />
+              <IoIosArrowUp />
             </span>
           </h4>
         ) : (
           <h4>
             Показать ещё{" "}
             <span>
-              <AiOutlineArrowDown />
+              <IoIosArrowDown />
             </span>
           </h4>
         )}

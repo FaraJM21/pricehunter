@@ -182,12 +182,13 @@ select {
 }
 
 .carousel {
-  height: 550px;
+  margin: 5% 0;
+  height: 350px;
 }
 .product-title {
   position: relative;
   width: 200px;
-  left: 0;
+  left: 2%;
 }
 
 @media (max-width: 960px) {

@@ -2,15 +2,14 @@
 .about {
   width: 100%;
   padding: 150px 0;
-
-  
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  // background: red;
 }
 
-
-
-
 .filters {
-  width: 100%;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -18,10 +17,10 @@
 }
 
 .btns {
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: flex;
-  gap: 20px;
+  gap: 50px;
 
   button {
     height: 55px;
@@ -40,10 +39,10 @@
   }
 }
 
-
 .details {
-  width: 40%;
-  margin: 0 5%;
+  width: 50%;
+  padding: 0 50px;
+  
   h3 {
     line-height: 3.4rem;
     padding: 20px 0;
@@ -62,25 +61,28 @@
   }
 }
 
-
-@media (max-width:700px){
-  .btns{
+@media (max-width: 700px) {
+  .btns {
     width: 100%;
-    .btn1, .btn2{
+    height: 150px;
+    .btn1,
+    .btn2 {
       width: 50%;
+      font-size: 1rem;
     }
   }
 
-  .details{
-   width: 100%;
-   margin: 0;
-   h3{
-    padding: 0 20px;
-   }
+  
 
-   .list{
-    justify-content: space-around;
-   }
+  .details {
+    width: 100%;
+    margin: 0;
+    h3 {
+      padding: 0 20px;
+    }
+
+    .list {
+      justify-content: space-around;
+    }
   }
-
 }
