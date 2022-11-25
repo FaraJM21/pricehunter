@@ -267,6 +267,12 @@ select {
   }
 }
 
+@media (max-width: 720px) {
+  .products {
+    margin-top: 25%;
+  }
+}
+
 @media (max-width: 618px) {
   .ads,
   .adTitle {
