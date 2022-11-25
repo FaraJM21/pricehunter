@@ -21,6 +21,8 @@
     justify-content: space-around;
   }
 }
+
+
 .items {
   width: 100%;
   display: flex;
@@ -93,6 +95,7 @@
 
 .card {
   position: relative;
+  margin: auto;
   width: 80%;
   height: 350px;
   border: 1px solid rgba(221, 14, 29, 0.3);

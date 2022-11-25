@@ -41,8 +41,8 @@ function Sentence() {
         <Row id={cls.row} wrap={true} justify="center">
           {arr.map((item, index) => {
             return (
-              <Col span={spanNum} id={cls.col}>
-                <div className={cls.card} key={index}>
+              <Col span={spanNum} id={cls.col} key={index}>
+                <div className={cls.card} >
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>

@@ -26,8 +26,8 @@ function Offer() {
         {show
           ? shopItem.map((item, index) => {
               return (
-                <>
-                  <div className={cls.card} index={index}>
+                <div className={cls.maincard} key={index} style = {{width:'100%'}}>
+                  <div className={cls.card}>
                     <div className={cls.left}>
                       <p>Продавец</p>
                       <p>Категория</p>
@@ -43,7 +43,7 @@ function Offer() {
                     </div>
                     <button>Перейти в Mediapark</button>
                   </div>
-                  <div className={cls.item} key={index}>
+                  <div className={cls.item}>
                     <p>{item.title}</p>
 
                     <p>{item.category}</p>
@@ -54,13 +54,13 @@ function Offer() {
 
                     <button>Перейти в Mediapark</button>
                   </div>
-                </>
+                </div>
               );
             })
           : shopItem.slice(0, 3).map((item, index) => {
               return (
-                <>
-                  <div className={cls.card} index={index}>
+                <div  className={cls.maincard} key={index} style = {{width:'100%'}}>
+                  <div className={cls.card}>
                     <div className={cls.left}>
                       <p>Продавец</p>
                       <p>Категория</p>
@@ -76,7 +76,8 @@ function Offer() {
                     </div>
                     <button>Перейти в Mediapark</button>
                   </div>
-                  <div className={cls.item} key={index}>
+
+                  <div className={cls.item}>
                     <p>{item.title}</p>
 
                     <p>{item.category}</p>
@@ -87,7 +88,7 @@ function Offer() {
 
                     <button>Перейти в Mediapark</button>
                   </div>
-                </>
+                </div>
               );
             })}
       </div>
