@@ -153,25 +153,17 @@
 }
 
 @media (max-width: 500px) {
-  .top {
+  #two .price {
+    span {
+      display: none;
+    }
+  }
+
+  #two select{
     width: 100%;
   }
-  .selects {
-    #two {
-      .price {
-        position: relative;
-        width: 60%;
-        .select {
-          width: 40%;
-        }
-        span {
-          // position: static;
-          position: absolute;
-          left: 10%;
-          width: 20%;
-          text-align: end;
-        }
-      }
-    }
+
+  .select p {
+    font-size: 1rem;
   }
 }
