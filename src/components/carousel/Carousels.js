@@ -6,7 +6,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Pagination } from "swiper";
+import { Autoplay, FreeMode, Navigation, Pagination } from "swiper";
 import { arr } from "../../data/data";
 import { Container } from "@mui/system";
 
@@ -39,10 +39,15 @@ function Carousels() {
     <Container>
       <Swiper
         slidesPerView={num}
+        loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         freeMode={width <= 800 ? false : true}
         navigation={width <= 800 ? false : true}
         pagination={width <= 800 ? true : false}
-        modules={[FreeMode, Navigation, Pagination]}
+        modules={[Autoplay, FreeMode, Navigation, Pagination]}
         id={cls.myswiper}
         style={{
           "--swiper-navigation-color": "#DD0E1D",

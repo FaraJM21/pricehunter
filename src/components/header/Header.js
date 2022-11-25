@@ -12,16 +12,19 @@ import { Container } from "@mui/material";
 import user from "../../assets/user.svg";
 function Header() {
   const [value, setValue] = useState("");
+  const [color, setColor] = useState("");
   let rus = /[А-з]/gi;
   let eng = /[A-z]/gi;
   let navigate = useNavigate();
   const [scroll, setScroll] = useState("");
 
   const controlNavbar = () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 10) {
       setScroll("rgba(0, 0, 0, 0.24) 0px 3px 8px");
+      setColor(" hsla(0, 0%, 97%, 0.949)");
     } else if (window.scrollY === 0) {
-      setScroll(" ");
+      setScroll("");
+      setColor("");
     }
   };
 
@@ -49,7 +52,7 @@ function Header() {
   return (
     <header
       className={cls.header}
-      style={{ boxShadow: scroll, transition: "0.5s" }}
+      style={{ boxShadow: scroll, transition: "0.1s", background: color }}
     >
       <Container>
         <nav className={cls.nav}>
