@@ -33,6 +33,7 @@
   display: flex;
   gap: 10px;
 }
+
 .box {
   width: 100%;
   display: flex;
@@ -274,9 +275,9 @@ select {
 }
 
 @media (max-width: 618px) {
-  .ads,
-  .adTitle {
-    display: none;
+  .ads {
+    width: 100%;
+    height: auto;
   }
   .btn {
     flex-wrap: wrap;
@@ -290,7 +291,21 @@ select {
 }
 
 @media (max-width: 450px) {
+  .adTitle {
+    line-height: 9 rem;
+    font-size: 1.4rem;
+    height: 50px;
+  }
+  .ads .cards-group .cards {
+    width: 50%;
+    height: 100px;
+  }
+
+  .card {
+    width: 100%;
+    height: 160px;
+  }
   .main {
-    margin-top: 25%;
+    margin-top: 35%;
   }
 }
