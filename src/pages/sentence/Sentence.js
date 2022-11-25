@@ -38,12 +38,12 @@ function Sentence() {
   return (
     <div className={cls.products}>
       <ProductSec />
-      <Container>
-        <Row id={cls.row} wrap={true} justify="center">
+      <Container >
+        <Row id={cls.row}>
           {arr.map((item, index) => {
             return (
-              <Col span={spanNum} id={cls.col} key={index}>
-                <div className={cls.card}>
+              <Col id={cls.col} xs={spanNum} sm={7} md={7} lg={7} xl={6}>
+                <div className={cls.card} key={index}>
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>

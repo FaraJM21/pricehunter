@@ -12,7 +12,7 @@ function Products() {
   const arr = itemArr;
   const [windowSize, setWindowSize] = useState(undefined);
   const [spanNum, setSpan] = useState(24);
- 
+
   useEffect(() => {
     window.scrollTo(0, 0);
     // Handler to call on window resize
@@ -20,10 +20,10 @@ function Products() {
       // Set window width/height to state
       setWindowSize(window.innerWidth);
 
-      if (windowSize <= 650) {
+      if (windowSize <= 565) {
         setSpan(24);
       } else {
-        setSpan(6);
+        setSpan(24);
       }
     }
     // Add event listener
@@ -37,12 +37,12 @@ function Products() {
   return (
     <div className={cls.products}>
       <Product />
-      <Container>
-        <Row id={cls.row} wrap={true} justify="center">
+      <Container >
+        <Row id={cls.row}>
           {arr.map((item, index) => {
             return (
-              <Col span={spanNum} id={cls.col} key={index}>
-                <div className={cls.card}>
+              <Col id={cls.col} xs={spanNum} sm={7} md={7} lg={7} xl={6}>
+                <div className={cls.card} key={index}>
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>

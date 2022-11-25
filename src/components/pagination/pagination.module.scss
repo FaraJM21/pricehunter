@@ -9,14 +9,11 @@
   transition: 1s;
   margin-top: 5%;
 
-  @media (max-width: 510px) {
-    position: absolute;
-    width: 250px;
-    height: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0%;
-    margin: auto;
+  @media (max-width: 503px) {
+    
+    width: 219px;
+    height: 46px;
+   
   }
 
   span {

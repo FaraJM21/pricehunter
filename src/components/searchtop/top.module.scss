@@ -44,11 +44,12 @@
     height: 100%;
     border: none;
     outline: none;
+    text-transform: capitalize;
   }
 
   .category {
     width: 40%;
-    height: 100%;
+    height: 101%;
     font-size: 14px;
     background: #d9d9d9;
     border: 1px solid #dd0e1d;
@@ -85,9 +86,9 @@
   }
 
   .result {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     p {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -117,9 +118,20 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 736px) {
+  .top {
+    width: 80%;
+    margin: auto;
+  }
+  .result {
+    width: 75%;
+    margin: auto;
+  }
   .selects {
+    width: 80%;
+    margin: auto;
     flex-wrap: wrap;
+
     .select,
     #two {
       width: 100%;
@@ -129,11 +141,11 @@
 
       span {
         left: 20%;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
 
       select {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
     }
     select {
@@ -141,34 +153,40 @@
     }
 
     select {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
   }
 
   .category {
     p {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
 }
 
 @media (max-width: 500px) {
+  .top {
+    width: 100%;
+    .selects,.result {
+      width: 100%;
+    }
+  }
   #two .price {
     span {
       display: none;
     }
   }
 
-  #two select{
+  #two select {
     width: 100%;
-   
   }
 
-  .select select{
+  .select select {
     background: none;
+    font-size: 1.2rem;
   }
 
   .select p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }

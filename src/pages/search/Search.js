@@ -34,6 +34,9 @@ function Search() {
 
                     <div className={cls.about}>
                       <p>Модель:</p>
+                      <Link to={"/about"}>
+                        <button>Перейти в товар</button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -58,15 +61,14 @@ function Search() {
                     </ul>
                   </div>
                 </div>
-                <Link to={"/about"}>
-                  <button>Перейти в товар</button>
-                </Link>
               </div>
             );
           })}
         </div>
-
+        <div className={cls.pagination}>
         <Paginations />
+        </div>
+        
       </Container>
     </div>
   );
