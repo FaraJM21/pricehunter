@@ -2,7 +2,7 @@
 .inputs {
   width: 100%;
   display: flex;
-  // height: 150px;
+  height: 150px;
   justify-content: space-between;
   margin: 50px auto;
 
@@ -98,6 +98,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin: 20% 0;
 
     label {
       width: 100%;
@@ -155,20 +156,20 @@
 @media (max-width: 426px) {
   .inputs {
     .input {
-      .sum {
-        display: none;
-      }
+     .sum{
+      display:none
+     }
 
-      button {
-        width: 30%;
-        font-size: 8px;
-      }
+     button{
+      width: 30%;
+      font-size: 8px;
+     }
 
-      input {
-        right: 20%;
-        width: 60%;
-        margin: none;
-      }
+     input{
+      right: 20%;
+      width: 60%;
+      margin: none;
+     }
     }
   }
 }
