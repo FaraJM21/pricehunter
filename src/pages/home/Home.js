@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
+import CarouselsSecond from "../../components/carouselsecond/CarouselSecond";
 import {
   Carousels,
   PaginationCarousel,
-  Product,
-  ProductSec,
   Shops,
   MainBottom,
 } from "../../components/index";
@@ -16,8 +15,8 @@ function Home() {
   }, []);
   return (
     <main className="main">
-      <h3 className="adTitle">Мы помогаем сохранить ваши деньги</h3>
       <div className="ads">
+        <h3>Мы помогаем сохранить ваши деньги</h3>
         <div className="box">
           <div className="card one"></div>
           <div className="cards-group">
@@ -40,12 +39,9 @@ function Home() {
         </div>
       </div>
 
-      <Product />
       <Carousels />
 
-      <ProductSec />
-
-      <Carousels />
+      <CarouselsSecond />
 
       <PaginationCarousel />
 

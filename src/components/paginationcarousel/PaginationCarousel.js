@@ -36,27 +36,25 @@ export default function PaginationCarousel() {
   }, [width]);
   const data = arr;
   return (
-    <div className="carousel">
-      <Container>
-        <h3 className="product-title">Лучшее падение цен</h3>
-        <Swiper
-          slidesPerView={num}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="swiper"
-        >
-          {data.map((item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <div className="imgbox"></div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </Container>
-    </div>
+    <Container>
+      <h3 className="sale">Лучшее падение цен</h3>
+      <Swiper
+        slidesPerView={num}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="myswiper"
+      >
+        {data.map((item, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <div className="imgbox"></div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </Container>
   );
 }

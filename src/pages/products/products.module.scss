@@ -4,20 +4,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 30px;
   position: relative;
   // padding: 80px 0;
-  margin: 30px 0;
+  margin: 100px 0;
   a {
     text-decoration: none;
   }
 }
 
 #row {
+  position: relative;
   width: 100%;
-
   justify-content: space-between;
-  row-gap: 80px;
+  row-gap: 30px;
+}
+
+#col {
+  display: flex;
+  justify-content: center;
 }
 
 .card:hover {
@@ -29,7 +34,7 @@
   width: 15rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   transition: 0.3s;
   border-radius: 10px;
   cursor: pointer;
@@ -45,8 +50,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 20px 0;
+  gap: 5px;
+  padding: 10px 0;
 
   button {
     width: 11rem;
@@ -60,20 +65,20 @@
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.8rem;
   font-weight: 500;
 }
 
 .price {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.9rem;
 }
 
 .bottom {
-  width: 90%;
-  margin: 5% auto;
+  width: 100%;
+  height: 100px;
 }
 
 .inner {
@@ -98,122 +103,60 @@
   }
 }
 
-@media (max-width: 864px) {
-  #row {
-    width: 100%;
-    justify-content: space-around;
-    gap: 50px;
-  }
-  // .card {
-  //   width: 13rem;
-  //   height: 20rem;
-  // }
-}
-
-@media (max-width: 575px) {
-  #row {
-    justify-content: center;
-  }
-
+@media (max-width: 765px) {
   #col {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .card {
-    width: 226px;
-    p {
-      font-size: 1.6rem;
-    }
-    button {
-      width: 176px;
-    }
-  }
+    width: 330px;
+    height: 315px;
 
-  .bottom{
+    .info {
+      gap: 12px;
+    }
+
+    .info p {
+      font-size: 1.3rem;
+    }
+
+    .info button {
+      width: 176px;
+      height: 42px;
+    }
+
+    img {
+      width: 330px;
+      height: 170px;
+    }
+    // height: 50%;
+  }
+  .bottom {
     display: flex;
     justify-content: center;
 
-    .inner{
-      width: 224px;
+    .inner {
+      width: 250px;
       height: 46px;
-      span{
-        width: 39px;
-        height: 90%;
-      }
+    }
+
+    span {
+      width: 39px;
+      height: 39px;
     }
   }
 }
 
-// @media (max-width: 960px) {
-//   #row {
-//     justify-content: flex-start;
-//     gap: 30px;
-//     row-gap: 60px;
-//   }
-//   .card {
-//     width: 15rem;
-//     height: 24rem;
-//   }
-// }
-
-// @media (max-width: 700px) {
-//   #row {
-//     justify-content: flex-start;
-//     gap: 90px;
-//   }
-//   .card {
-//     width: 15rem;
-//     height: 24rem;
-//   }
-// }
-
-// @media (max-width: 650px) {
-//   #row {
-//     justify-content: center;
-//     row-gap: 90px;
-//   }
-//   #col {
-//     width: 100%;
-//     flex: 100%;
-//     height: 500px;
-//     display: flex;
-//     justify-content: center;
-
-//     .card {
-//       width: 60%;
-//       height: 450px;
-//       p {
-//         font-size: 1.5rem;
-//       }
-//       button {
-//         width: 200px;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 450px) {
-//   #row {
-//     row-gap: 150px;
-//     #col {
-//       height: 350px;
-//     }
-//     .card {
-//       width: 80%;
-//       height:40rem;
-//       button {
-//         width: 14.5rem;
-//       }
-//     }
-//   }
-
-//   .bottom{
-//     width: 250px;
-//     margin: 30% auto;
-//     .inner{
-//       width: 100%;
-//     };
-//   }
-// }
+@media (max-width: 370px) {
+  #col {
+    width: 80%;
+    margin: auto;
+    // background-color: red;
+  }
+  .card {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}

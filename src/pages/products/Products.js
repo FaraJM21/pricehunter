@@ -11,7 +11,7 @@ function Products() {
   const [num, setNum] = useState(1);
   const arr = itemArr;
   const [windowSize, setWindowSize] = useState(undefined);
-  const [spanNum, setSpan] = useState(24);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,11 +20,7 @@ function Products() {
       // Set window width/height to state
       setWindowSize(window.innerWidth);
 
-      if (windowSize <= 565) {
-        setSpan(24);
-      } else {
-        setSpan(24);
-      }
+     
     }
     // Add event listener
     window.addEventListener("resize", handleResize);
@@ -35,13 +31,13 @@ function Products() {
   }, [windowSize]); // Empty array ensures that effect is only run on mount
 
   return (
-    <div className={cls.products}>
-      <Product />
-      <Container >
+    <Container>
+      <div className={cls.products}>
+        <Product />
         <Row id={cls.row}>
           {arr.map((item, index) => {
             return (
-              <Col id={cls.col} xs={spanNum} sm={7} md={7} lg={7} xl={6}>
+              <Col id={cls.col}  sm={24} md={12} lg={7} xl={6}>
                 <div className={cls.card} key={index}>
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>
@@ -56,9 +52,7 @@ function Products() {
               </Col>
             );
           })}
-        </Row>
-
-        <div className={cls.bottom}>
+          <div className={cls.bottom}>
           <div className={cls.inner}>
             <LeftOutlined onClick={() => num !== 1 && setNum(num - 1)} />
             {nums.map((number, index) => {
@@ -77,8 +71,11 @@ function Products() {
             })}
           </div>
         </div>
-      </Container>
-    </div>
+        </Row>
+
+        
+      </div>
+    </Container>
   );
 }
 

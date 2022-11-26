@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import cls from "./carousel.module.scss";
+import cls from "../carousel/carousel.module.scss";
 import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -9,7 +9,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode, Navigation, Pagination } from "swiper";
 import { arr } from "../../data/data";
 import { Container } from "@mui/system";
-import Product from "../products/Product";
+
+import ProductSec from "../products/ProductSec";
 
 function CarouselsSecond() {
   const data = arr;
@@ -38,7 +39,7 @@ function CarouselsSecond() {
 
   return (
     <Container>
-      <Product />
+      <ProductSec />
       <Swiper
         slidesPerView={num}
         loop={true}
