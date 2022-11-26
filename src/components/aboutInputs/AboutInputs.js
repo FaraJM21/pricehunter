@@ -27,7 +27,7 @@ function AboutInputs(props) {
         <label>
           Снизиться до
           <div className={cls.input}>
-            <span>сум</span>
+            <div className={cls.sum}>сум</div>
             <input type="text" />
             <button>Отслеживать</button>
           </div>

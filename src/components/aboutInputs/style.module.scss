@@ -2,9 +2,13 @@
 .inputs {
   width: 100%;
   display: flex;
-  height: 150px;
+  // height: 150px;
   justify-content: space-between;
-  margin: auto;
+  margin: 50px auto;
+
+  input {
+    outline: none;
+  }
 
   label {
     width: 33.3%;
@@ -28,44 +32,49 @@
     height: 50px;
 
     input {
-      width: 45%;
+      width: 50%;
       height: 100%;
       position: absolute;
-      left: 19%;
+      left: 0;
+      right: 0;
       bottom: 0;
       margin: auto;
       border: none;
       outline: none;
-      padding: 0 10px;
+      padding: 0 5px;
     }
 
-    span,
     button {
-      width: 7.5rem;
-      height: 100%;
-      right: 10%;
+      width: 25%;
+      height: 50.1px;
+      top: 0;
+      margin: auto;
+      right: 0;
+      bottom: 0;
+      font-size: 10px;
       position: absolute;
       border-radius: 30px;
+      font-size: 0.7rem;
       @include btnEffect;
-    }
-
-    button {
-      right: 0;
     }
 
     button:hover {
       @include btnHover;
     }
 
-    span {
-      width: 66px;
-      height: 100%;
+    .sum {
+      position: absolute;
+      height: 50.1px;
+      width: 25%;
       display: flex;
       justify-content: center;
       align-items: center;
-      left: 0%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
       border-radius: 25.5px;
-      border: 1px solid red;
+      border: 2px solid red;
     }
   }
 
@@ -82,29 +91,17 @@
   }
 }
 
-@media (max-width: 785px) {
-  .inputs {
-    width: 100%;
-    justify-content: space-around;
-    height: 300px;
-    label {
-      font-size: 0.9rem;
-    }
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 1010px) {
   .inputs {
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    height: 380px;
 
     label {
       width: 100%;
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding: 0 20px;
 
       input,
@@ -118,46 +115,59 @@
       }
     }
 
-    .input input {
-      width: 70%;
-      padding: 0 10px;
-      left: 0;
-      right: 4%;
-      bottom: 0;
-      margin: auto;
-      // background-color: red;
+    .input {
+      button,
+      .sum {
+        font-size: 1rem;
+      }
     }
 
-    .input {
-      span {
-        width: 13%;
-      }
-      button {
-        width: 16%;
-        font-size: 0.9rem;
-      }
+    // .input input {
+    //   width: 70%;
+    //   padding: 0 10px;
+    //   left: 0;
+    //   right: 4%;
+    //   bottom: 0;
+    //   margin: auto;
+    //   // background-color: red;
+    // }
+
+    // .input {
+    //   span {
+    //     width: 13%;
+    //   }
+    //   button {
+    //     width: 16%;
+    //     font-size: 0.9rem;
+    //   }
+    // }
+  }
+}
+
+@media (max-width: 590px) {
+  .inputs {
+    label {
+      font-size: 1.2rem;
     }
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 426px) {
   .inputs {
     .input {
-      input {
-        // background-color: blue;
-        width: 55%;
-        right: 5%;
-        left: 0;
+      .sum {
+        display: none;
       }
-      span {
-        width: 20%;
-      }
+
       button {
-        font-size: 1rem;
-        width: 25%;
-        height: 100%;
-        font-size: 0.5rem;
-        // background-color: red;
+        width: 30%;
+        font-size: 8px;
+      }
+
+      input {
+        right: 20%;
+        width: 60%;
+        margin: none;
       }
     }
   }

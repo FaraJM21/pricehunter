@@ -6,6 +6,7 @@
     width: 40%;
     height: 90%;
     border-radius: 10px;
+    object-fit: cover;
   }
 }
 
@@ -90,21 +91,45 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 994px) {
+  .top {
+    img {
+      width: 30%;
+      height: 80%;
+    }
+  }
+
+  .card {
+    gap: 10px;
+  }
+
+  .wrapper {
+    height: 80%;
+  }
+}
+
+@media (max-width: 775px) {
   .card {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 700px;
+    height: 400px;
     img {
       width: 80%;
-      height: 60%;
+      height:50%
     }
   }
 
   .wrapper {
     width: 80%;
     position: relative;
+
+    .info{
+      h3{
+       
+        font-size: 1.8rem;
+      }
+    }
   }
 
   .wrapper .about .category {
@@ -115,86 +140,112 @@
   .card .text,
   .inner .price h4 {
     position: absolute;
+    font-size: 1.2rem;
   }
   .wrapper button {
-    width: 50%;
-    bottom: 25%;
+    width: 90%;
+    bottom: 30%;
+    height: 40px;
     left: 0;
     right: 0;
     margin: auto;
+    font-size: 1.2rem;
   }
   .card .text {
     width: 100%;
     text-align: center;
+    font-size: 1rem;
     bottom: 0%;
+  }
+
+  .inner .price p{
+    font-size: 1.1rem;
   }
 
   .inner .price h4 {
     left: 0%;
   }
+  // .card img {
+  //   width: 80%;
+  //   height: 50%;
+  // }
+  // .wrapper {
+  //   width: 80%;
+  // }
+  // .wrapper button {
+  //   bottom: 50%;
+  // }
+
+  // .wrapper .info,
+  // .inner {
+  //   height: 40%;
+  // }
+
+  // .card .text {
+  //   bottom: 30%;
+  // }
 }
 
-@media (max-width: 775px) {
-  .card img {
-    width: 80%;
-    height: 50%;
-  }
-  .wrapper {
-    width: 80%;
-  }
-  .wrapper button {
-    bottom: 50%;
-  }
+@media (max-width: 460px) {
 
-  .wrapper .info,
-  .inner {
-    height: 40%;
-  }
-
-  .card .text {
-    bottom: 30%;
-  }
-}
-
-@media (max-width: 575px) {
-  .wrapper {
+  .card img, .wrapper{
     width: 100%;
+    font-size: 1.1rem;
   }
 
-  .card img {
-    width: 100%;
-    height: 50%;
-  }
-  .wrapper button {
-    width: 100%;
-    height: 40px;
-    bottom: 60%;
+  .card{
+    height: 350px;
+
+    button{
+      height: 40px;
+      }
+
+      .wrapper .info h3,.inner h4, .inner p{
+        font-size: 1.1rem;
+      }
   }
 
-  .card .text {
-    bottom: 40%;
-    font-size: 1.4rem;
-  }
+  
 
-  .inner .price {
-    font-size: 1.3rem;
-  }
-  .wrapper .info h3 {
-    font-size: 1.6rem;
-  }
-  .inner h4 {
-    font-size: 1.5rem;
-  }
+  
+  // .wrapper {
+  //   width: 100%;
+  // }
+
+  // .card img {
+  //   width: 100%;
+  //   height: 50%;
+  // }
+  // .wrapper button {
+  //   width: 100%;
+  //   height: 40px;
+  //   bottom: 60%;
+  // }
+
+  // .card .text {
+  //   bottom: 40%;
+  //   font-size: 1.4rem;
+  // }
+
+  // .inner .price {
+  //   font-size: 1.3rem;
+  // }
+  // .wrapper .info h3 {
+  //   font-size: 1.6rem;
+  // }
+  // .inner h4 {
+  //   font-size: 1.5rem;
+  // }
 }
 
-@media (max-width: 350px) {
-  .card img {
-    height: 30%;
-  }
-  .card .text,
-  .inner .price,
-  .wrapper .info h3,
-  .inner h4 {
-    font-size: 1.2rem;
-  }
-}
+// @media (max-width: 350px) {
+//   .card img {
+//     height: 30%;
+//   }
+//   .card .text,
+//   .inner .price,
+//   .wrapper .info h3,
+//   .inner h4 {
+//     font-size: 1.2rem;
+//   }
+// }

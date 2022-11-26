@@ -75,13 +75,12 @@
   width: 100%;
   display: none;
   justify-content: center;
-  
 }
 
 #btn {
-  width: 60%;
+  width: 70%;
   height: 46px;
-  background: #D9D9D9;;
+  background: #d9d9d9;
   border-radius: 22px;
   border: 2px solid rgba(221, 14, 29, 1);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -109,7 +108,7 @@
   }
 
   .right {
-      font-weight: 500;
+    font-weight: 500;
   }
 
   button {
@@ -146,7 +145,7 @@
     width: 100%;
   }
 
-  .items{
+  .items {
     gap: 25px;
   }
 
@@ -188,7 +187,7 @@
     }
     .btn {
       #btn {
-        width: 80%;
+        width: 90%;
       }
     }
 
