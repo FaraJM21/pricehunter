@@ -26,7 +26,11 @@ function Offer() {
         {show
           ? shopItem.map((item, index) => {
               return (
-                <div className={cls.maincard} key={index} style = {{width:'100%'}}>
+                <div
+                  className={cls.maincard}
+                  key={index}
+                  style={{ width: "100%" }}
+                >
                   <div className={cls.card}>
                     <div className={cls.left}>
                       <p>Продавец</p>
@@ -44,13 +48,15 @@ function Offer() {
                     <button>Перейти в Mediapark</button>
                   </div>
                   <div className={cls.item}>
-                    <p>{item.title}</p>
+                    <div className={cls.text}>
+                      <p>{item.title}</p>
 
-                    <p>{item.category}</p>
+                      <p>{item.category}</p>
 
-                    <p>{item.price}</p>
+                      <p>{item.price}</p>
 
-                    <p>{item.date}</p>
+                      <p>{item.date}</p>
+                    </div>
 
                     <button>Перейти в Mediapark</button>
                   </div>
@@ -59,7 +65,11 @@ function Offer() {
             })
           : shopItem.slice(0, 3).map((item, index) => {
               return (
-                <div  className={cls.maincard} key={index} style = {{width:'100%'}}>
+                <div
+                  className={cls.maincard}
+                  key={index}
+                  style={{ width: "100%" }}
+                >
                   <div className={cls.card}>
                     <div className={cls.left}>
                       <p>Продавец</p>
@@ -78,13 +88,15 @@ function Offer() {
                   </div>
 
                   <div className={cls.item}>
-                    <p>{item.title}</p>
+                    <div className={cls.text}>
+                      <p>{item.title}</p>
 
-                    <p>{item.category}</p>
+                      <p>{item.category}</p>
 
-                    <p>{item.price}</p>
+                      <p>{item.price}</p>
 
-                    <p>{item.date}</p>
+                      <p>{item.date}</p>
+                    </div>
 
                     <button>Перейти в Mediapark</button>
                   </div>

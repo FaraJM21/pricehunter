@@ -1,19 +1,17 @@
 .offer {
-  width: 90%;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  max-width: 1200px;
 }
 .catalogue {
   width: 100%;
-
+  position: relative;
   .params {
-    width: 78%;
+    width: 70%;
     display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    justify-content: space-between;
+    margin: 20px 3%;
   }
 }
 
@@ -24,17 +22,26 @@
   gap: 10px;
 }
 .item {
+  position: relative;
   width: 100%;
   align-items: center;
   display: flex;
-  justify-content: space-around;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 34px;
   font-weight: 500;
-  padding: 10px 0;
+  padding: 30px 0;
+
+  .text {
+    position: absolute;
+    left: 2%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
 
   button {
-    position: relative;
+    position: absolute;
+    right: 1%;
     width: 10rem;
     height: 44px;
     background: #dd0e1d;
@@ -43,7 +50,6 @@
     border: none;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    left: 4%;
   }
   button:active {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -78,7 +84,7 @@
 }
 
 #btn {
-  width: 70%;
+  width: 80%;
   height: 46px;
   background: #d9d9d9;
   border-radius: 22px;
@@ -133,12 +139,6 @@
 @media (max-width: 700px) {
   .offer {
     position: relative;
-
-    h3,
-    h4 {
-      //  text-align: center;
-      padding: 0 15%;
-    }
   }
   .offer,
   .items {
@@ -149,7 +149,21 @@
     gap: 25px;
   }
 
-  .show {
+  .items {
+    align-items: center;
+  }
+}
+
+@media (max-width: 510px) {
+  .offer {
+    h3,
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+  .show,
+  .catalogue,
+  .item {
     display: none;
   }
 
@@ -157,27 +171,8 @@
     display: flex;
   }
 
-  .items {
-    align-items: center;
-  }
-  .catalogue,
-  .item {
-    display: none;
-  }
-
   .card {
     display: flex;
-  }
-}
-
-@media (max-width: 440px) {
-  .offer {
-    h3,
-    h4 {
-      font-size: 1.5rem;
-    }
-  }
-  .card {
     width: 80%;
     height: 250px;
     .left,
@@ -195,5 +190,14 @@
       width: 60%;
       height: 40px;
     }
+  }
+}
+
+@media (max-width: 460px) {
+  .card {
+    width: 100%;
+  }
+  #btn {
+    width: 100%;
   }
 }

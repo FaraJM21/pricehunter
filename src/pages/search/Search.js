@@ -15,7 +15,6 @@ function Search() {
     <div className={cls.search}>
       <Container>
         <SearchTop item={item} />
-
         <div className={cls.products}>
           {data.slice(0, 5).map((product, index) => {
             return (
@@ -66,9 +65,8 @@ function Search() {
           })}
         </div>
         <div className={cls.pagination}>
-        <Paginations />
+          <Paginations />
         </div>
-        
       </Container>
     </div>
   );

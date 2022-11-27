@@ -11,13 +11,13 @@ function About() {
   }, []);
 
   return (
-    <div className={cls.about}>
-      <AboutTop />
+    <Container>
+      <div className={cls.about}>
+        <AboutTop />
 
-      <Offer />
+        <Offer />
 
-      <div className={cls.filters}>
-        <Container>
+        <div className={cls.filters}>
           <div className={cls.btns}>
             <button
               className={cls.btn1}
@@ -40,12 +40,11 @@ function About() {
               Детали товара
             </button>
           </div>
-        </Container>
-        <AboutInputs details={details} />
 
-        <AboutBottom details={details} />
+          <AboutInputs details={details} />
 
-        <Container>
+          <AboutBottom details={details} />
+
           <div
             className={cls.details}
             style={{ display: details ? "block" : "none" }}
@@ -68,9 +67,9 @@ function About() {
               </ul>
             </div>
           </div>
-        </Container>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 }
 

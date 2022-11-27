@@ -2,12 +2,7 @@
 
 .top {
   width: 100%;
-  img {
-    width: 40%;
-    height: 90%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
+  
 }
 
 .card {
@@ -17,8 +12,14 @@
   justify-content: space-between;
   gap: 30px;
   align-items: flex-start;
-  height: 280px;
-  padding: 0 40px;
+  height: 298px;
+  img {
+    width: 441px;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  // height: 280px;
   button {
     width: 10rem;
     height: 3rem;
@@ -53,8 +54,7 @@
   .about {
     display: flex;
     flex-direction: column;
-    height: 45%;
-    gap: 35px;
+    gap: 30px;
     .category {
       display: flex;
       gap: 30px;
@@ -82,7 +82,7 @@
   align-items: center;
   text-align: end;
   justify-content: space-between;
-  height: 90%;
+  height: 100%;
   span {
     font-size: 2rem;
   }
@@ -116,7 +116,7 @@
     height: 400px;
     img {
       width: 80%;
-      height:50%
+      height: 50%;
     }
   }
 
@@ -124,9 +124,8 @@
     width: 80%;
     position: relative;
 
-    .info{
-      h3{
-       
+    .info {
+      h3 {
         font-size: 1.8rem;
       }
     }
@@ -158,7 +157,7 @@
     bottom: 0%;
   }
 
-  .inner .price p{
+  .inner .price p {
     font-size: 1.1rem;
   }
 
@@ -187,27 +186,26 @@
 }
 
 @media (max-width: 460px) {
-
-  .card img, .wrapper{
+  .card img,
+  .wrapper {
     width: 100%;
     font-size: 1.1rem;
   }
 
-  .card{
+  .card {
     height: 350px;
 
-    button{
+    button {
       height: 40px;
-      }
+    }
 
-      .wrapper .info h3,.inner h4, .inner p{
-        font-size: 1.1rem;
-      }
+    .wrapper .info h3,
+    .inner h4,
+    .inner p {
+      font-size: 1.1rem;
+    }
   }
 
-  
-
-  
   // .wrapper {
   //   width: 100%;
   // }

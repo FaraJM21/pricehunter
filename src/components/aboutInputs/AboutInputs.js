@@ -1,39 +1,36 @@
-import { Container } from "@mui/system";
 import React from "react";
 import cls from "./style.module.scss";
 function AboutInputs(props) {
   return (
-    <Container>
-      <div
-        className={cls.inputs}
-        style={{ display: props.details ? "none" : "flex" }}
-      >
-        <label>
-          Мы отправим уведомление на почту:
-          <input type="email" name="email" id={cls.email} />
-        </label>
+    <div
+      className={cls.inputs}
+      style={{ display: props.details ? "none" : "flex" }}
+    >
+      <label>
+        Мы отправим уведомление на почту:
+        <input type="email" name="email" id={cls.email} />
+      </label>
 
-        <label>
-          Магазин
-          <select name="shops" id="shop">
-            <option defaultValue>Магазины</option>
-            <option value="alishop">Alishop</option>
-            <option value="mediapark">Mediapark</option>
-            <option value="karzinka">Karzinka</option>
-            <option value="havas">Havas</option>
-          </select>
-        </label>
+      <label>
+        Магазин
+        <select name="shops" id="shop">
+          <option defaultValue>Магазины</option>
+          <option value="alishop">Alishop</option>
+          <option value="mediapark">Mediapark</option>
+          <option value="karzinka">Karzinka</option>
+          <option value="havas">Havas</option>
+        </select>
+      </label>
 
-        <label>
-          Снизиться до
-          <div className={cls.input}>
-            <div className={cls.sum}>сум</div>
-            <input type="text" />
-            <button>Отслеживать</button>
-          </div>
-        </label>
-      </div>
-    </Container>
+      <label>
+        Снизиться до
+        <div className={cls.input}>
+          <div className={cls.sum}>сум</div>
+          <input type="text" />
+          <button>Отслеживать</button>
+        </div>
+      </label>
+    </div>
   );
 }
 
