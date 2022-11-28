@@ -34,8 +34,8 @@ function Products() {
         <Row id={cls.row}>
           {arr.map((item, index) => {
             return (
-              <Col id={cls.col} sm={24} md={12} lg={7} xl={6}>
-                <div className={cls.card} key={index}>
+              <Col id={cls.col} sm={24} md={12} lg={7} xl={6} key={index}>
+                <div className={cls.card}>
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>
