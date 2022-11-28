@@ -37,11 +37,14 @@
   }
 
   button {
+    @include btnEffect;
     width: 186px;
     height: 48px;
-    font-size: 1rem;
-    border: 2px solid #dd0e1d;
-    border-radius: 24px;
+   
+  }
+
+  button:hover{
+    @include btnHover
   }
 }
 
