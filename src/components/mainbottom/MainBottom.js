@@ -3,7 +3,6 @@ import cls from "./mainbottom.module.scss";
 import apple from "../../assets/Apple svg.svg";
 import gplay from "../../assets/[CITYPNG.COM]PNG White Google Play PlayStore Logo Symbol Icon - 512x512.png";
 import saly from "../../assets/Saly-24.png";
-import Tilt from "react-parallax-tilt";
 import { Container } from "@mui/system";
 function MainBottom() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -51,11 +50,11 @@ function MainBottom() {
             </div>
           </div>
         </div>
-        <Tilt className={cls.parallax} perspective={500}>
+      
           <div className={cls.img}>
             <img src={saly} alt="404" />
           </div>
-        </Tilt>
+
 
         <div className={cls.qr_code}>
           <div className={cls.qrImg}></div>
