@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Button, Drawer, Radio, Space } from "antd";
+import { Drawer, Space } from "antd";
 import "./style.scss";
 
 import { CloseOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 const TemporaryDrawer = () => {
   const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState("left");
+  const placement = "left";
   let navigate = useNavigate();
   const showDrawer = () => {
     setOpen(true);
