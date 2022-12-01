@@ -4,95 +4,155 @@ import { Column } from "@ant-design/plots";
 const Charts = () => {
   const data = [
     {
-      type: "Cola",
-      sales: 140,
+      type: "a",
+      sales: 147,
     },
     {
-      type: "Fanta",
-      sales: 100,
+      type: "b",
+      sales: 120,
     },
     {
-      type: "Sprite",
-      sales: 65,
+      type: "c",
+      sales: 120,
     },
     {
-      type: "7-UP",
-      sales: 130,
+      type: "d",
+      sales: 115,
     },
     {
-      type: "8-UP",
-      sales: 48,
+      type: "e",
+      sales: 105,
     },
     {
-      type: "9-UP",
-      sales: 38,
+      type: "f",
+      sales: 90,
     },
     {
-      type: "10-UP",
-      sales: 88,
+      type: "g",
+      sales: 60,
     },
     {
-      type: "UP",
-      sales: 78,
+      type: "h",
+      sales: 60,
     },
     {
-      type: "123-UP",
-      sales: 130,
+      type: "i",
+      sales: 59,
     },
     {
-      type: "132-UP",
-      sales: 48,
+      type: "j",
+      sales: 62,
     },
     {
-      type: "1231-UP",
-      sales: 32,
+      type: "k",
+      sales: 61,
     },
     {
-      type: "24UP",
-      sales: 88,
+      type: "l",
+      sales: 55,
     },
     {
-      type: "32-UP",
-      sales: 78,
+      type: "m",
+      sales: 54,
     },
 
     {
-      type: "67UP",
-      sales: 88,
+      type: "n",
+      sales: 40,
     },
     {
-      type: "23-UP",
-      sales: 78,
+      type: "o",
+      sales: 50,
     },
     {
-      type: "2123UP",
-      sales: 88,
+      type: "p",
+      sales: 55,
     },
     {
-      type: "3124-UP",
-      sales: 78,
+      type: "q",
+      sales: 65,
+    },
+    {
+      type: "r",
+      sales: 75,
+    },
+    {
+      type: "s",
+      sales: 80,
+    },
+    {
+      type: "t",
+      sales: 95,
+    },
+    {
+      type: "u",
+      sales: 98,
+    },
+    {
+      type: "v",
+      sales: 102,
+    },
+    {
+      type: "w",
+      sales: 110,
+    },
+    {
+      type: "x",
+      sales: 105,
+    },
+    {
+      type: "y",
+      sales: 100,
+    },
+    {
+      type: "z",
+      sales: 95,
+    },
+    {
+      type: "a-1",
+      sales: 87,
+    },
+    {
+      type: "1-2",
+      sales: 73,
+    },
+    {
+      type: "a-3",
+      sales: 68,
+    },
+    {
+      type: "a-4",
+      sales: 56,
+    },
+    {
+      type: "a-5",
+      sales: 55,
+    },
+    {
+      type: "a-6",
+      sales: 65,
     },
   ];
   const config = {
     data,
+    columnStyle: {
+      radius: [10, 10, 0, 0],
+    },
     xField: "type",
     yField: "sales",
-    maxColumnWidth: 32,
+    maxColumnWidth: 20,
 
     color: ({ type }) => {
-      if (type === "Cola" || type === "9-UP" || type === "123-UP") {
+      if (type === "a" || type === "n") {
         return "dark";
       }
-      return "silver";
+      return "#D9D9D9";
     },
     label: {
-      // 可手动配置 label 数据标签位置
-      position: "top",
-      // 'top', 'bottom', 'middle',
-      // 配置样式
+      position: false,
       style: {
         fill: "dark",
-        opacity: 1,
+        opacity: 0,
       },
     },
     xAxis: {
