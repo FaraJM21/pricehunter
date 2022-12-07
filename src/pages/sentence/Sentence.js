@@ -1,16 +1,24 @@
 import { LeftOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { itemArr } from "../../data/data";
+import { arr } from "../../data/data";
 import cls from "../products/products.module.scss";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getImg } from "../../redux/ImageReducer";
 import { Container } from "@mui/system";
 import { Col, Row } from "antd";
 import ProductSec from "../../components/products/ProductSec";
 function Products() {
   const nums = [1, 2, 3, 4, 5];
   const [num, setNum] = useState(1);
-  const arr = itemArr;
+  const itemArr = arr;
   const [windowSize, setWindowSize] = useState(undefined);
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
+  const handleClick = (item) => {
+    dispatch(getImg(item));
+    navigate("/about");
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,7 +40,7 @@ function Products() {
       <div className={cls.products}>
         <ProductSec />
         <Row id={cls.row}>
-          {arr.map((item, index) => {
+          {itemArr.map((item, index) => {
             return (
               <Col id={cls.col} sm={24} md={12} lg={7} xl={6} key={index}>
                 <div className={cls.card}>
@@ -40,10 +48,10 @@ function Products() {
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>
                     <p className={cls.price}>{item.price} сум</p>
-                    <Link to={"/about"}>
+                    <button onClick={() => handleClick(item.img)}>
                       {" "}
-                      <button> Cмотреть детали </button>
-                    </Link>
+                      Cмотреть детали{" "}
+                    </button>
                   </div>
                 </div>
               </Col>

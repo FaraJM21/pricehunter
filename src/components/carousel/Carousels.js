@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cls from "./carousel.module.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -10,12 +11,19 @@ import { Autoplay, FreeMode, Navigation, Pagination } from "swiper";
 import { arr } from "../../data/data";
 import { Container } from "@mui/system";
 import Product from "../products/Product";
+import { getImg } from "../../redux/ImageReducer";
 
 function CarouselsSecond() {
   const data = arr;
   const [width, setWidth] = useState(window.innerWidth);
   const [num, setNum] = useState(4);
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
 
+  const handleClick = (item) => {
+    dispatch(getImg(item));
+    navigate("/about");
+  };
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
 
@@ -63,11 +71,11 @@ function CarouselsSecond() {
                 <img src={item.img} alt="404" />
                 <div className={cls.info}>
                   <p className={cls.title}>{item.title}</p>
-                  <p className={cls.price}>{item.price} сум</p>
-                  <Link to={"/about"}>
+                  <p className={cls.price}>{item.price} сум</p>{" "}
+                  <button onClick={() => handleClick(item.img)}>
                     {" "}
-                    <button> Cмотреть детали </button>
-                  </Link>
+                    Cмотреть детали{" "}
+                  </button>
                 </div>
               </div>
             </SwiperSlide>

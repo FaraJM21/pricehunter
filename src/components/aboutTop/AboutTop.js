@@ -1,16 +1,18 @@
-
 import React from "react";
+import { useSelector } from "react-redux";
 import { AiOutlineHeart } from "react-icons/ai";
 import { itemArr } from "../../data/data";
 import cls from "./top.module.scss";
 function AboutTop() {
   const data = itemArr;
+  const selector = useSelector((state) => state.picture.img);
+  console.log(selector);
   return (
     <div className={cls.top}>
       {data.slice(0, 1).map((item, index) => {
         return (
           <div className={cls.card} key={index}>
-            <img src={item.img} alt="404" />
+            <img src={selector} alt="404" />
             <div className={cls.wrapper}>
               <div className={cls.info}>
                 <h3>{item.title}</h3>

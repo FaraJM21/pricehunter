@@ -1,17 +1,24 @@
 import { LeftOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import Product from "../../components/products/Product";
-import { Link } from "react-router-dom";
-import { itemArr } from "../../data/data";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getImg } from "../../redux/ImageReducer";
+import { arr } from "../../data/data";
 import cls from "./products.module.scss";
 import { Container } from "@mui/system";
 import { Col, Row } from "antd";
 function Products() {
   const nums = [1, 2, 3, 4, 5];
   const [num, setNum] = useState(1);
-  const arr = itemArr;
+  const itemArr = arr;
   const [windowSize, setWindowSize] = useState(undefined);
-  
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
+  const handleClick = (item) => {
+    dispatch(getImg(item));
+    navigate("/about");
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,8 +26,6 @@ function Products() {
     function handleResize() {
       // Set window width/height to state
       setWindowSize(window.innerWidth);
-
-     
     }
     // Add event listener
     window.addEventListener("resize", handleResize);
@@ -35,45 +40,44 @@ function Products() {
       <div className={cls.products}>
         <Product />
         <Row id={cls.row}>
-          {arr.map((item, index) => {
+          {itemArr.map((item, index) => {
             return (
-              <Col id={cls.col}  sm={24} md={12} lg={7} xl={6} key={index}>
-                <div className={cls.card} >
+              <Col id={cls.col} sm={24} md={12} lg={7} xl={6} key={index}>
+                <div className={cls.card}>
                   <img src={item.img} alt="404" />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>
                     <p className={cls.price}>{item.price} сум</p>
-                    <Link to={"/about"}>
+
+                    <button onClick={() => handleClick(item.img)}>
                       {" "}
-                      <button> Cмотреть детали </button>
-                    </Link>
+                      Cмотреть детали{" "}
+                    </button>
                   </div>
                 </div>
               </Col>
             );
           })}
           <div className={cls.bottom}>
-          <div className={cls.inner}>
-            <LeftOutlined onClick={() => num !== 1 && setNum(num - 1)} />
-            {nums.map((number, index) => {
-              return (
-                <span
-                  key={index}
-                  style={{
-                    background: num === number && "red",
-                    color: num === number && "white",
-                  }}
-                  onClick={() => setNum(number)}
-                >
-                  {number}
-                </span>
-              );
-            })}
+            <div className={cls.inner}>
+              <LeftOutlined onClick={() => num !== 1 && setNum(num - 1)} />
+              {nums.map((number, index) => {
+                return (
+                  <span
+                    key={index}
+                    style={{
+                      background: num === number && "red",
+                      color: num === number && "white",
+                    }}
+                    onClick={() => setNum(number)}
+                  >
+                    {number}
+                  </span>
+                );
+              })}
+            </div>
           </div>
-        </div>
         </Row>
-
-        
       </div>
     </Container>
   );

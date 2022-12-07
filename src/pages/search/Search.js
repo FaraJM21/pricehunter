@@ -1,6 +1,8 @@
 import { Container } from "@mui/system";
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getImg } from "../../redux/ImageReducer";
 import Paginations from "../../components/pagination/Paginations";
 import SearchTop from "../../components/searchtop/SearchTop";
 import { arr } from "../../data/data";
@@ -8,6 +10,12 @@ import cls from "./search.module.scss";
 function Search() {
   let item = useLocation();
   let data = arr;
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
+  const handleClick = (item) => {
+    dispatch(getImg(item));
+    navigate("/about");
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,7 +24,7 @@ function Search() {
       <Container>
         <SearchTop item={item} />
         <div className={cls.products}>
-          {data.slice(0, 5).map((product, index) => {
+          {data.map((product, index) => {
             return (
               <div
                 className={cls.card}
@@ -33,9 +41,10 @@ function Search() {
 
                     <div className={cls.about}>
                       <p>Модель:</p>
-                      <Link to={"/about"}>
-                        <button>Перейти в товар</button>
-                      </Link>
+                      <button onClick={() => handleClick(item.img)}>
+                      {" "}
+                      Cмотреть детали{" "}
+                    </button>
                     </div>
                   </div>
                 </div>

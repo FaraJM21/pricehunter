@@ -41,16 +41,20 @@ export default function PaginationCarousel() {
       <Swiper
         slidesPerView={num}
         spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={true}
         modules={[Pagination]}
         className="myswiper"
       >
         {data.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="imgbox"></div>
+              <div
+                className="imgbox"
+                style={{
+                  background: `url(${item.img}) no-repeat center center`,
+                  backgroundSize: "cover",
+                }}
+              ></div>
             </SwiperSlide>
           );
         })}

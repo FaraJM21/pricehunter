@@ -1,9 +1,9 @@
 import { Container } from "@mui/system";
 import React from "react";
-import { arr } from "../../data/data";
+import { shopArr } from "../../data/data";
 import cls from "./shops.module.scss";
 function Shops() {
-  const data = arr;
+  const data = shopArr;
 
   return (
     <Container>
@@ -13,7 +13,7 @@ function Shops() {
           {data.map((item, index) => {
             return (
               <div className={cls.card} key={index}>
-                <img src={item.img} alt="404" />
+                <img src={item.img} alt="404" width={50} height={50} />
                 <div className={cls.title}>{item.title}</div>
               </div>
             );

@@ -27,8 +27,8 @@
   width: 264px;
   height: 200px;
   transition: 0.3s;
-  background: url(https://media.idownloadblog.com/wp-content/uploads/2018/04/iPhone8-RED-wallpaper.jpeg)
-    no-repeat center center;
+  // background: url(https://media.idownloadblog.com/wp-content/uploads/2018/04/iPhone8-RED-wallpaper.jpeg)
+  //   no-repeat center center;
   background-size: cover;
   border-radius: 10px;
 }
@@ -53,9 +53,5 @@
     width: 100%;
     height: 300px;
   }
-  .imgbox {
-    width: 90%;
-    height: 65%;
-    border-radius: 30px;
-  }
+ 
 }
