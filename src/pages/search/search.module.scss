@@ -145,7 +145,7 @@
     text-align: start;
     height: 488px;
     img {
-      width: 80%;
+      
       height: 176px;
     }
 
@@ -201,9 +201,6 @@
 @media (max-width: 503px) {
   .card {
     width: 100%;
-    img {
-      width: 100%;
-    }
   }
   .wrapper {
     width: 100%;
