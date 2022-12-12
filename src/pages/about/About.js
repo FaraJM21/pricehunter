@@ -5,6 +5,7 @@ import { Container } from "@mui/system";
 
 function About() {
   const [details, setDetails] = useState(false);
+ 
 
   useEffect(() => {
     window.scrollTo(0, 0);

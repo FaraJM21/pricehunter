@@ -1,0 +1,27 @@
+.aboutLoading{
+    width: 374px;
+    height: 298px;
+    
+    
+  .ant-skeleton-element {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+   
+  }
+
+  .ant-skeleton-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsla(0, 0%, 74.5%, 0.2);
+    width: 374px !important;
+    border-radius: 20px !important;
+    height: 298px !important;
+    @media (max-width:555px) {
+      width: 310px !important;
+    }
+  }
+}

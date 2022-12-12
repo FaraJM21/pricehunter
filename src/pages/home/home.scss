@@ -56,7 +56,15 @@
   .cards {
     width: 288px;
     height: 206px;
-    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 30px;
+    }
   }
 }
 
@@ -66,15 +74,12 @@
 }
 
 .one {
-  background: url(https://techrushi.com/wp-content/uploads/2022/09/iPhone-14-and-iPhone-14-Pro.jpg)
-    no-repeat center center;
-  background-size: cover;
-}
-
-.cards {
-  background: url(https://assets-prd.ignimgs.com/2022/06/23/high-end-4k-tv-1655968850923.jpg)
-    no-repeat center center;
-  background-size: cover;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
 }
 
 .two {
@@ -224,7 +229,7 @@ select {
   }
   .card {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
   .cards-group {
     width: 100%;

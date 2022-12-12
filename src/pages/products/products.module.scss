@@ -34,6 +34,7 @@
   width: 15rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   transition: 0.3s;
   border-radius: 10px;
@@ -126,8 +127,8 @@
     }
 
     img {
-      width: 330px;
-      height: 170px;
+      width: 180px;
+      height: 180px;
     }
     // height: 50%;
   }
@@ -155,8 +156,6 @@
   }
   .card {
     width: 100%;
-    img {
-      width: 100%;
-    }
+   
   }
 }

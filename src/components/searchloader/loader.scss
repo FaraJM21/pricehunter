@@ -1,0 +1,30 @@
+.searchLoader {
+  width: 326px;
+  height: 224px;
+  @media (max-width: 830px) {
+    width: 225px !important;
+  }
+  @media (max-width: 736px) {
+    height: 176px !important;
+  }
+
+  .ant-skeleton-element {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+   
+  }
+
+  .ant-skeleton-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsla(0, 0%, 74.5%, 0.2);
+    width: 326px !important;
+    border-radius: 20px !important;
+    height: 100% !important;
+
+  }
+}

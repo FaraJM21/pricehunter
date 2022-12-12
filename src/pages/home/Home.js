@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import CarouselsSecond from "../../components/carouselsecond/CarouselSecond";
 import {
@@ -6,10 +6,15 @@ import {
   PaginationCarousel,
   Shops,
   MainBottom,
+  Skeletons,
 } from "../../components/index";
 
 import "./home.scss";
 function Home() {
+  const [loading, setLoading] = useState(false);
+  const handleLoad = () => {
+    setLoading(true);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,10 +23,34 @@ function Home() {
       <div className="ads">
         <h3>Мы помогаем сохранить ваши деньги</h3>
         <div className="box">
-          <div className="card one"></div>
+          <div className="card one">
+            {!loading && <Skeletons />}
+            <img
+              onLoad={handleLoad}
+              style={{ display: loading ? "block" : "none" }}
+              src="https://techrushi.com/wp-content/uploads/2022/09/iPhone-14-and-iPhone-14-Pro.jpg"
+              alt="404"
+            />
+          </div>
           <div className="cards-group">
-            <div className="cards"></div>
-            <div className="cards"></div>
+            <div className="cards">
+            {!loading && <Skeletons />}
+              <img
+                onLoad={handleLoad}
+                style={{ display: loading ? "block" : "none" }}
+                src="https://assets-prd.ignimgs.com/2022/06/23/high-end-4k-tv-1655968850923.jpg"
+                alt="404"
+              />
+            </div>
+            <div className="cards">
+            {!loading && <Skeletons />}
+              <img
+                onLoad={handleLoad}
+                style={{ display: loading ? "block" : "none" }}
+                src="https://assets-prd.ignimgs.com/2022/06/23/high-end-4k-tv-1655968850923.jpg"
+                alt="404"
+              />
+            </div>
           </div>
           <div className="card two">
             <div className="card-box">

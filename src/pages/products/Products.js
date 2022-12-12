@@ -8,8 +8,10 @@ import { arr } from "../../data/data";
 import cls from "./products.module.scss";
 import { Container } from "@mui/system";
 import { Col, Row } from "antd";
+import { Skeleton } from "antd";
 function Products() {
   const nums = [1, 2, 3, 4, 5];
+  const [loading, setLoading] = useState(false);
   const [num, setNum] = useState(1);
   const itemArr = arr;
   const [windowSize, setWindowSize] = useState(undefined);
@@ -44,7 +46,17 @@ function Products() {
             return (
               <Col id={cls.col} sm={24} md={12} lg={7} xl={6} key={index}>
                 <div className={cls.card}>
-                  <img src={item.img} alt="404" />
+                  {!loading && (
+                    <Skeleton.Image
+                      active
+                      style={{ width: "160px", height: "180px" }}
+                    />
+                  )}
+                  <img
+                    src={item.img}
+                    alt="404"
+                    onLoad={() => setLoading(true)}
+                  />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>
                     <p className={cls.price}>{item.price} сум</p>

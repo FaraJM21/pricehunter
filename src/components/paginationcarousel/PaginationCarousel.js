@@ -12,10 +12,12 @@ import "./style.scss";
 import { Pagination } from "swiper";
 import { arr } from "../../data/data";
 import { Container } from "@mui/system";
+import { Skeleton } from "antd";
 
 export default function PaginationCarousel() {
   const [width, setWidth] = useState(window.innerWidth);
   const [num, setNum] = useState(4);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -35,6 +37,7 @@ export default function PaginationCarousel() {
     };
   }, [width]);
   const data = arr;
+
   return (
     <Container>
       <h3 className="sale">Лучшее падение цен</h3>
@@ -48,13 +51,14 @@ export default function PaginationCarousel() {
         {data.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div
-                className="imgbox"
-                style={{
-                  background: `url(${item.img}) no-repeat center center`,
-                  backgroundSize: "cover",
-                }}
-              ></div>
+              {!loading && <Skeleton.Image active />}
+              <img
+                className="proImg"
+                src={item.img}
+                alt="404"
+                onLoad={() => setLoading(true)}
+                style={{ dispaly: loading ? "block" : "none" }}
+              />
             </SwiperSlide>
           );
         })}

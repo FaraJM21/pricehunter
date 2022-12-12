@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import cls from "../carousel/carousel.module.scss";
 import { useDispatch } from "react-redux";
 import { getImg } from "../../redux/ImageReducer";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -11,10 +11,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode, Navigation, Pagination } from "swiper";
 import { arr } from "../../data/data";
 import { Container } from "@mui/system";
-
 import ProductSec from "../products/ProductSec";
+import CarouselLoader from "../carouselLoader/CarouselLoader";
 
 function CarouselsSecond() {
+  const [loading, setLoading] = useState(false);
+
   const data = arr;
   const [width, setWidth] = useState(window.innerWidth);
   const [num, setNum] = useState(4);
@@ -69,11 +71,16 @@ function CarouselsSecond() {
           return (
             <SwiperSlide key={index}>
               <div className={cls.card}>
-                <img src={item.img} alt="404" />
+                {!loading && <CarouselLoader />}
+                <img
+                  src={item.img}
+                  alt="404"
+                  style={{ display: loading ? "block" : "none" }}
+                  onLoad={() => setLoading(true)}
+                />
                 <div className={cls.info}>
                   <p className={cls.title}>{item.title}</p>
-                  <p className={cls.price}>{item.price} сум</p>
-
+                  <p className={cls.price}>{item.price} сум</p>{" "}
                   <button onClick={() => handleClick(item.img)}>
                     {" "}
                     Cмотреть детали{" "}

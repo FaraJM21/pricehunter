@@ -4,8 +4,10 @@ import apple from "../../assets/Apple svg.svg";
 import gplay from "../../assets/[CITYPNG.COM]PNG White Google Play PlayStore Logo Symbol Icon - 512x512.png";
 import saly from "../../assets/Saly-24.png";
 import { Container } from "@mui/system";
+import { Skeleton } from "antd";
 function MainBottom() {
   const [width, setWidth] = useState(window.innerWidth);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
@@ -50,11 +52,21 @@ function MainBottom() {
             </div>
           </div>
         </div>
-      
-          <div className={cls.img}>
-            <img src={saly} alt="404" />
-          </div>
 
+        <div className={cls.img}>
+          {!loading && (
+            <Skeleton.Image
+              active
+              style={{ width: "237px", height: "350px" }}
+            />
+          )}
+          <img
+            src={saly}
+            alt="404"
+            style={{ display: loading ? "block" : "none" }}
+            onLoad={() => setLoading(true)}
+          />
+        </div>
 
         <div className={cls.qr_code}>
           <div className={cls.qrImg}></div>

@@ -14,3 +14,5 @@ export { default as RadioButtons } from "./radio/RadioButton";
 export { default as Charts } from "./barchart/Charts";
 export { default as AboutInputs } from "./aboutInputs/AboutInputs";
 export { default as AboutBottom } from "./aboutBottom/AboutBottom";
+export { default as Skeletons } from "./skeletons/Skeletons";
+export { default as SearchLoader } from "./searchloader/SearchLoader";

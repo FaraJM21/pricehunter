@@ -8,10 +8,12 @@ import { getImg } from "../../redux/ImageReducer";
 import { Container } from "@mui/system";
 import { Col, Row } from "antd";
 import ProductSec from "../../components/products/ProductSec";
+import { Skeleton } from "antd";
 function Products() {
   const nums = [1, 2, 3, 4, 5];
   const [num, setNum] = useState(1);
   const itemArr = arr;
+  const [loading, setLoading] = useState(false);
   const [windowSize, setWindowSize] = useState(undefined);
   let dispatch = useDispatch();
   let navigate = useNavigate();
@@ -44,7 +46,18 @@ function Products() {
             return (
               <Col id={cls.col} sm={24} md={12} lg={7} xl={6} key={index}>
                 <div className={cls.card}>
-                  <img src={item.img} alt="404" />
+                  {!loading && (
+                    <Skeleton.Image
+                      active
+                      style={{ width: "160px", height: "180px" }}
+                    />
+                  )}
+                  <img
+                    src={item.img}
+                    alt="404"
+                    onLoad={() => setLoading(true)}
+                    // style={{ dispaly: loading ? "block" : "none" }}
+                  />
                   <div className={cls.info}>
                     <p className={cls.title}>{item.title}</p>
                     <p className={cls.price}>{item.price} сум</p>

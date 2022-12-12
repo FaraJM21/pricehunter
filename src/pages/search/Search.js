@@ -1,5 +1,5 @@
 import { Container } from "@mui/system";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getImg } from "../../redux/ImageReducer";
@@ -7,8 +7,10 @@ import Paginations from "../../components/pagination/Paginations";
 import SearchTop from "../../components/searchtop/SearchTop";
 import { arr } from "../../data/data";
 import cls from "./search.module.scss";
+import { SearchLoader } from "../../components";
 function Search() {
   let item = useLocation();
+  const [loading, setLoading] = useState(false);
   let data = arr;
   let dispatch = useDispatch();
   let navigate = useNavigate();
@@ -19,6 +21,7 @@ function Search() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className={cls.search}>
       <Container>
@@ -35,16 +38,21 @@ function Search() {
                 }}
               >
                 <div className={cls.wrapper}>
-                  <img src={product.img} alt="404" />
+                  {!loading && <SearchLoader />}
+                  <img
+                    src={product.img}
+                    alt="404"
+                    onLoad={() => setLoading(true)}
+                    style={{ display: loading ? "block" : "none" }}
+                  />
                   <div className={cls.info}>
                     <h3>{product.title}</h3>
-
                     <div className={cls.about}>
                       <p>Модель:</p>
                       <button onClick={() => handleClick(item.img)}>
-                      {" "}
-                      Cмотреть детали{" "}
-                    </button>
+                        {" "}
+                        Cмотреть детали{" "}
+                      </button>
                     </div>
                   </div>
                 </div>

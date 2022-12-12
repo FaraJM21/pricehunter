@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { AiOutlineHeart } from "react-icons/ai";
 import { itemArr } from "../../data/data";
 import cls from "./top.module.scss";
+import AboutLoading from "../aboutLoading/AboutLoading";
 function AboutTop() {
   const data = itemArr;
+  const [loading, setLoading] = useState(false);
   const selector = useSelector((state) => state.picture.img);
   console.log(selector);
   return (
@@ -12,7 +14,8 @@ function AboutTop() {
       {data.slice(0, 1).map((item, index) => {
         return (
           <div className={cls.card} key={index}>
-            <img src={selector} alt="404" />
+            {!loading && <AboutLoading/>  }
+            <img src={selector} alt="404"  onLoad={()=>setLoading(true)} style ={{display: loading ? 'block' : 'none'}}/>
             <div className={cls.wrapper}>
               <div className={cls.info}>
                 <h3>{item.title}</h3>
