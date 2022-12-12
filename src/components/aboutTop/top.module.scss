@@ -177,7 +177,7 @@
   .card {
     // height: 550px;
     img {
-      width: 100%;
+      width: 70%;
     }
     button {
       height: 40px;
@@ -188,5 +188,16 @@
     .inner p {
       font-size: 1.1rem;
     }
+  }
+}
+
+
+@media (max-width:400px) {
+  .card {
+    // height: 550px;
+    img {
+      width: 100%;
+    }
+
   }
 }
