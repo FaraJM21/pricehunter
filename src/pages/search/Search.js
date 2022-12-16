@@ -49,7 +49,7 @@ function Search() {
                     <h3>{product.title}</h3>
                     <div className={cls.about}>
                       <p>Модель:</p>
-                      <button onClick={() => handleClick(item.img)}>
+                      <button onClick={() => handleClick(product.img)}>
                         {" "}
                         Cмотреть детали{" "}
                       </button>

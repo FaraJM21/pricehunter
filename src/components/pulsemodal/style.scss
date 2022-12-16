@@ -1,0 +1,95 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 50%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+.blocks {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  height: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  p:hover {
+    color: #2ca5e0;
+  }
+
+  .telegram,
+  .email,
+  .phone {
+    width: 40px;
+    height: 40px;
+    background-color: #2ca5e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 25px;
+      height: 60%;
+      color: white;
+    }
+  }
+
+  .email {
+    background-color: rgb(122, 4, 206);
+  }
+
+  .phone {
+    background-color: rgb(0, 134, 0);
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 200px;
+  height: 250px;
+  animation-name: slideIn;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation-duration: 0.4s;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 10px;
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 14%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

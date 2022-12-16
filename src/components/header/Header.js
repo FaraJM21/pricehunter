@@ -87,7 +87,7 @@ function Header() {
             <Link to={"products"}>Выгодние Предложения</Link>
             <Link to={"/offer"}>Предложения</Link>
 
-            <img src={user} alt="404" />
+            <img src={user} alt="404"  id={cls.user}/>
           </div>
         </nav>
       </Container>
